@@ -1,0 +1,32 @@
+//INICIO
+function iniciar()
+{	
+	const lienzo = document.getElementById("lienzo");
+	const ctx = lienzo.getContext("2d");
+	ctx.textRendering = "optimizeLegibility";
+	dirigir();
+	rotar();
+	console.log("listo");
+}
+
+//REFRESCO
+function iterar()
+{
+	setTimeout(refrescar, 1000/fps);
+}	
+function rotar()
+{
+	if (parada != true && tocando != true)
+		rotacion.tx += 300;
+	setTimeout(rotar, 2000);
+}
+
+//ESCUCHAS
+window.onresize         = redimensionar;
+document.onmousedown    = click;
+document.onmouseup      = unclick;
+document.onmousemove    = orbitar;
+document.onwheel        = deslizarRueda;
+document.ontouchstart   = tocarIniciar;
+document.ontouchmove    = tocarMover;
+document.ontouchend     = tocarTerminar;
