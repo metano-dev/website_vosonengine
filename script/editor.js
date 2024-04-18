@@ -2,10 +2,10 @@ const colorVosonPrincipal   = "rgb(14, 16, 34)";
 const colorVosonParticula   = "rgb(45, 55, 95)";
 const colorVosonSecundario  = "rgb(255,111,0)";
 const colorVosonFondo       = "rgb(255,255,255)";
-const colorIRPrincipal      = "rgb(255,255,255)";
-const colorIRParticula      = "rgb(150,150,150)";
-const colorIRSecundario     = "rgb(100,100,100)";
-const colorIRFondo          = "rgb(0,0,0)"; 
+const colorIRPrincipal      = "rgb(14, 16, 34)";
+const colorIRParticula      = "rgb(45, 55, 95)";
+const colorIRSecundario     = "rgb(255,111,0)";
+const colorIRFondo          = "rgb(255,255,255)"; 
 const encabezadoTextoSeparacion = 30;
 const encabezadoTextoTamaño = 20;
 const encabezadoMargenHorizontal = 100;
@@ -71,9 +71,9 @@ const TXTproy1      = "Toy Park";
 const TXTproy2      = "Zombie Survival";
 const TXTcontactar  = "Contacto";
 
-const TXTinfinity01 = "INFINITY ROOM";
-const TXTinfinity02 = "INFINITY ROOM";
-const TXTinfinity03 = "Creamos experiencias en realidad virtual en la que puedes interactuar física y virtualmente con las personas, igual que en el mundo real";
+const TXTinfinity01 = "INFINITAS EXPERIENCIAS";
+const TXTinfinity02 = "EN UN ÚNICO LUGAR";
+const TXTinfinity03 = "Hacemos experiencias en realidad virtual para que hasta 6 personas jueguen a la vez, interactuando en el mismo espacio físico.";
 
 
 //==================PÁGINA PRINCIPAL========================
