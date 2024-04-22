@@ -1,3 +1,112 @@
+function DIBUJARfondo(i)
+{
+    obj = apartados[i];
+	if (obj.f == false)
+		return;
+    extra = 0;
+	c = obj.f;
+    //extra = (i==0)*(1-tamañoApartado);
+	const ctx = lienzo.getContext("2d");
+    ctx.fillStyle = "rgba"+c.slice(c.indexOf("("), c.length-1) +","+obj.a+")"
+	ctx.beginPath();
+    ctx.moveTo(-desborde,						obj.y) ;
+	ctx.lineTo(window.innerWidth + desborde,	obj.y) ;
+	ctx.lineTo(window.innerWidth + desborde,	obj.y + window.innerHeight*(tamañoApartado+extra)) ;
+	ctx.lineTo(-desborde,						obj.y + window.innerHeight*(tamañoApartado+extra)) ;
+    ctx.fill();
+}
+
+function DIBUJARtexto(obj)
+{
+	const ctx = lienzo.getContext("2d");
+	ctx.fillStyle = obj.c;
+	ctx.textAlign = obj.a;
+	ctx.textBaseline = obj.b;
+	ctx.font = obj.alt+"px " + obj.f;
+    ctx.letterSpacing = "0px";
+    
+    buf = obj.txt + " ";
+    lineas = [];
+    lineas[0] = buf ;
+    lineaMayor = ctx.measureText(buf).width;
+    cuadroT = 0;
+    i = 0;
+    j = 0;
+    k = 0;
+    cuenta = 0;
+    while (lineaMayor > obj.w && cuenta < 30)
+    {
+        while (lineaMayor > obj.w && lineas[j].lastIndexOf(" ") >= 0)
+        {
+            i = lineas[j].lastIndexOf(" ");
+            lineas[j] = lineas[j].slice(0, i);
+            lineaMayor  = ctx.measureText(lineas[j]).width;
+        }
+        if (ctx.measureText(lineas[j]).width>cuadroT) {cuadroT = ctx.measureText(lineas[j]).width }
+        ctx.fillText(lineas[j], obj.x, obj.y + j*obj.salt);
+        lineas[j+1] = buf.slice(k+i+1); 
+        k += lineas[j].length+1;
+        j += 1;
+        lineaMayor = ctx.measureText(lineas[j]).width;
+        cuenta += 1;
+    }
+    if (ctx.measureText(lineas[j]).width>cuadroT) {cuadroT = ctx.measureText(lineas[j]).width }
+    ctx.fillText(lineas[j], obj.x, obj.y + j*obj.salt);
+    //return [cuadroT, j*obj.salt + obj.alt];
+}
+
+function MEDIRtexto(obj)
+{
+	const ctx = lienzo.getContext("2d");
+	ctx.fillStyle = obj.c;
+	ctx.textAlign = obj.a;
+	ctx.textBaseline = obj.b;
+	ctx.font = obj.alt+"px " + obj.f;
+    ctx.letterSpacing = "0px";
+    
+    buf = obj.txt + " ";
+    lineas = [];
+    lineas[0] = buf ;
+    lineaMayor = ctx.measureText(buf).width;
+    cuadroT = 0;
+    i = 0;
+    j = 0;
+    k = 0;
+    cuenta = 0;
+    while (lineaMayor > obj.w && cuenta < 30)
+    {
+        while (lineaMayor > obj.w && lineas[j].lastIndexOf(" ") >= 0)
+        {
+            i = lineas[j].lastIndexOf(" ");
+            lineas[j] = lineas[j].slice(0, i);
+            lineaMayor  = ctx.measureText(lineas[j]).width;
+        };
+        if (ctx.measureText(lineas[j]).width>cuadroT) {cuadroT = ctx.measureText(lineas[j]).width }
+        //ctx.fillText(lineas[j], obj.x, obj.y + j*obj.salt);
+        lineas[j+1] = buf.slice(k+i+1); 
+        k += lineas[j].length+1;
+        j += 1;
+        lineaMayor = ctx.measureText(lineas[j]).width;
+        cuenta += 1;
+    }
+    if (ctx.measureText(lineas[j]).width>cuadroT) {cuadroT = ctx.measureText(lineas[j]).width }
+    //ctx.fillText(lineas[j], obj.x, obj.y + j*obj.salt);
+    return [cuadroT, j*obj.salt + obj.alt];
+}
+
+function DIBUJARcuadro(c, a, x, y, w, h)
+{
+    const ctx = lienzo.getContext("2d");
+    ctx.fillStyle = "rgba"+c.slice(c.indexOf("("), c.length-1) +","+a+")"
+	ctx.beginPath();
+    ctx.moveTo(x,	    y   ) ;
+	ctx.lineTo(x + w,   y   ) ;
+	ctx.lineTo(x + w,   y +h) ;
+	ctx.lineTo(x,       y +h) ;
+    ctx.closePath();
+    ctx.fill();
+}
+
 function DIBUJARencabezado(obj)
 {
 	const ctx = lienzo.getContext("2d");
@@ -13,7 +122,9 @@ function DIBUJARencabezado(obj)
 function DIBUJARlogoVoson(x, e)
 {
 	y = encabezadoMargenVertical;
-	l=0.04*e;
+	if (menuMovil == true)
+		e = encabezadoReducido;
+	l = 0.04*e;
 	const ctx = lienzo.getContext("2d");
     ctx.fillStyle = colorFondo;
 	ctx.strokeStyle = colorFondo;
@@ -137,8 +248,8 @@ function DIBUJARvertice(obj, frontal)
 		return;
 	if (frontal && v >= 0)
 		return;
-	x = u *responsividad;
-	y = (-v -w) *responsividad;
+	x = u *responsividad*compensacion;
+	y = (-v -w) *responsividad*compensacion;
 	if (x < -centro.x - desborde)
 		return;
 	if (x > window.innerWidth - centro.x + desborde)
@@ -148,7 +259,7 @@ function DIBUJARvertice(obj, frontal)
 	if (y > window.innerHeight - centro.y + desborde)
 		return;
 
-	rad = (3 - v*0.005)*responsividad ; //parametrizar
+	rad = (3 - v*0.005)*responsividad*compensacion*compensacion ; //parametrizar
 	lad = 4 + Math.floor(rad*0.6);
 	const ctx = lienzo.getContext("2d");
     ctx.fillStyle = colorPart;

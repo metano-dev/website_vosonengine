@@ -102,9 +102,10 @@ class origen
 }
 class apartado
 {
-	constructor(f, g, y, ty, e)
+	constructor(f, a, g, y, ty, e)
 	{
 		this.f  = f  ??"#AAA"; //fondo
+		this.a = a ??1;
 		this.g  = g  ??0.2;
 		this.y  = y  ??0;
 		this.ty = ty ??0;

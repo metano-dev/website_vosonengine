@@ -33,8 +33,9 @@ var menuInfinity = [
 var menuProyecto = [
 	new navegador(1, "",			TXTvoson),
 	new navegador(2, "InfinityRoom",TXTinifinity),
-	new navegador(3, 2, 			TXTcontacto)
+	new navegador(3, 3, 			TXTcontacto)
 ];
+var modelosTodos = [	modeloVoson,	modeloInfinity, modeloEspacio,	modeloAleatorio,	modeloOculus, modeloOndas,		modeloDinosaurio, modeloRobot];
 var modelosPrincipal = [modeloOculus,	modeloVoson,	modeloEspacio,	modeloAleatorio,	modeloOndas,		modeloDinosaurio, modeloEspacio, modeloEspacio, modeloEspacio];
 var modelosInfinity =  [modeloInfinity, modeloVoson,	modeloAleatorio,	modeloEspacio,	modeloRobot,	modeloDinosaurio,	modeloAleatorio,	modeloEspacio];
 var modelosProyecto =  [modeloRobot,	modeloEspacio,	modeloRobot,	modeloVoson,		modeloAleatorio,	modeloEspacio,	modeloAleatorio,	modeloEspacio];
@@ -42,13 +43,13 @@ var modelosProyecto =  [modeloRobot,	modeloEspacio,	modeloRobot,	modeloVoson,		m
 var paginaPrincipal = new pagina(
 	"principal",
 	[
-		new apartado(false,	0.24),	//(oculus -> logo)
-		new apartado(colorVosonPrincipal,		0.24),	//proyecto (partículas)
-		new apartado(false,		0.20),	//freeroom (partículas2)
-		new apartado(colorVosonPrincipal,		0.12),	//nosotros (onditas)
-		new apartado(colorVosonFondo,	0.12),	//valores (dinosaurio)
-		new apartado(false,		0.2),	//contacto (partículas)
-		new apartado(colorVosonPrincipal,		0.2)	//pie
+		new apartado(colorVosonPrincipal,	0.3, 0.24),	//(oculus -> logo)
+		new apartado(colorVosonPrincipal,		1,0.24),	//proyecto (partículas)
+		new apartado(false,		1,0.20),	//freeroom (partículas2)
+		new apartado(colorVosonPrincipal,		1,0.12),	//nosotros (onditas)
+		new apartado(colorVosonFondo,	1,0.12),	//valores (dinosaurio)
+		new apartado(false,		1,0.2),	//contacto (partículas)
+		new apartado(colorVosonPrincipal,		1,0.2)	//pie 
 	],
 	[0.7, 0.5, 0.5, 0.5, 0.5, 0.8, 0.5, 0.5, 0.5],
 	modelosPrincipal,
@@ -56,36 +57,36 @@ var paginaPrincipal = new pagina(
 	menuPrincipal,
 	1,
 	0.9,
-	[colorVosonPrincipal, colorVosonParticula, colorVosonSecundario, colorVosonFondo]
+	[colorVosonPrincipal, colorVosonSecundario, colorVosonParticulaA, colorVosonParticulaB, colorVosonFondo]
 );
 
 var paginaInfinity = new pagina(
 	"infinity",
 	[
-		new apartado("rgba(0,0,0,0.6)",		0.24),	// vídeo (logo infinity -> partículas)
-		new apartado("rgba(14, 16, 34, 0.8)",		0.24),	//diseñado
-		new apartado(colorIRPrincipal,		0.24),	//por que
-		new apartado(false,		0.24),	//toypark (modelo robot)
-		new apartado(false,	0.24),	//survival zombie (modelo zombie)
-		new apartado(false,		0.24),	//contacto (partículas)
-		new apartado(colorIRPrincipal,		0.24)	//pie
+		new apartado(colorIRPrincipal,		0.6, 0.24),	// vídeo (logo infinity -> partículas)
+		new apartado(colorIRPrincipal, 0.8,		0.24),	//diseñado
+		new apartado(colorIRPrincipal,		1,0.24),	//por que
+		new apartado(false,		1,0.24),	//toypark (modelo robot)
+		new apartado(false,	1,0.24),	//survival zombie (modelo zombie)
+		new apartado(false,		1,0.24),	//contacto (partículas)
+		new apartado(colorIRPrincipal,		1,0.24)	//pie
 	],
-	[0.8, 0.8, 0.2, 0.2, 0.8, 0.2, 0.8, 0.1, 0.9, 0.1, 0.9],
+	[0.8, 0.6, 0.2, 0.2, 0.8, 0.2, 0.8, 0.1, 0.9, 0.1, 0.9],
 	modelosInfinity,
 	["proyectos/ToyPark/ToyPark_video.mp4", "proyectos/ZombieSurvival/ZombieSurvival_video.mp4"],
 	menuInfinity,
 	1,
 	0.9,
-	[colorIRPrincipal, colorIRParticula, colorIRSecundario, colorIRFondo]
+	[colorIRPrincipal, colorIRSecundario, colorIRParticulaA, colorIRParticulaB, colorIRFondo]
 );
 
 var paginaProyecto = new pagina(
 	"proyecto",
 	[
-		new apartado(false,		0.24),	// vídeo (partículas)
-		new apartado(colorVosonPrincipal,		0.24),	//descripción (modelo del proyecto ej robot)
-		new apartado(false,		0.20),	//contacto (partículas)
-		new apartado(colorVosonPrincipal,		0.2)	//pie
+		new apartado(false,		1,0.24),	// vídeo (partículas)
+		new apartado(colorVosonPrincipal,		1,0.24),	//descripción (modelo del proyecto ej robot)
+		new apartado(colorVosonPrincipal,		0.2, 0.20),	//contacto (partículas)
+		new apartado(colorVosonPrincipal,		1,0.2)	//pie
 	],
 	[0.6, 0.5, 0.75, 0.75, 2, 2.5, 3, 3.5, 4, 4.5, 5],
 	modelosProyecto,
@@ -93,7 +94,7 @@ var paginaProyecto = new pagina(
 	menuProyecto,
 	0,
 	0.7,
-	[colorVosonPrincipal, colorVosonParticula, colorVosonSecundario, colorVosonFondo]
+	[colorVosonPrincipal, colorVosonSecundario, colorProyectoParticulaA, colorProyectoParticulaB, colorVosonFondo]
 );
 
 

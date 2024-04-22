@@ -1,5 +1,12 @@
 function dirigir()
 {
+	if (window.innerWidth/window.innerHeight < 9/16)
+	{
+			compensacion = 1.5;
+			movil = true;
+			verticesMaximos = 1000;
+			optimizarModelos();
+	}
     urlRaiz  = String(window.location).split("?")[0];
     urlExtra = String(window.location).split("?")[1];
 	
@@ -8,12 +15,14 @@ function dirigir()
 		iniciarPagina(paginaInfinity);
 		redimensionar();
 		cargarMedios();
+		deslizar();
 		return;
 	}
 	if (!urlExtra)
 	{
 		iniciarPagina(paginaPrincipal);
 		cargarMedios();
+		deslizar();
 		return;
 	}
 	for (i=0; i<listaProyectos.length; i++)
@@ -31,6 +40,7 @@ function dirigir()
 				iniciarPagina(paginaProyecto);
 				redimensionar();
 				iterar();
+				deslizar();
 				return;
 			}
 		}
@@ -61,14 +71,15 @@ function iniciarPagina(pag)
 function definirColores(pag)
 {
 	colorPrincipal = pag.colores[0];
-	colorVert = pag.colores[1];
-	colorSecundario = pag.colores[2];
-	colorFondo = pag.colores[3];
-	colorPartR = parseInt(colorVert.split("(")[1].split(")")[0].split(",")[0]);
-	colorPartG = parseInt(colorVert.split("(")[1].split(")")[0].split(",")[1]);
-	colorPartB = parseInt(colorVert.split("(")[1].split(")")[0].split(",")[2]);
-	dPartR = parseInt(colorSecundario.split("(")[1].split(")")[0].split(",")[0]) - parseInt(colorVert.split("(")[1].split(")")[0].split(",")[0]);
-	dPartG = parseInt(colorSecundario.split("(")[1].split(")")[0].split(",")[1]) - parseInt(colorVert.split("(")[1].split(")")[0].split(",")[1]);
-	dPartB = parseInt(colorSecundario.split("(")[1].split(")")[0].split(",")[2]) - parseInt(colorVert.split("(")[1].split(")")[0].split(",")[2]);
-	colorPart = colorVert;
+	colorSecundario = pag.colores[1];
+	colorVertA = pag.colores[2];
+	colorVertB = pag.colores[3];
+	colorFondo = pag.colores[4];
+	colorPartR = parseInt(colorVertA.split("(")[1].split(")")[0].split(",")[0]);
+	colorPartG = parseInt(colorVertA.split("(")[1].split(")")[0].split(",")[1]);
+	colorPartB = parseInt(colorVertA.split("(")[1].split(")")[0].split(",")[2]);
+	dPartR = parseInt(colorVertB.split("(")[1].split(")")[0].split(",")[0]) - parseInt(colorVertA.split("(")[1].split(")")[0].split(",")[0]);
+	dPartG = parseInt(colorVertB.split("(")[1].split(")")[0].split(",")[1]) - parseInt(colorVertA.split("(")[1].split(")")[0].split(",")[1]);
+	dPartB = parseInt(colorVertB.split("(")[1].split(")")[0].split(",")[2]) - parseInt(colorVertA.split("(")[1].split(")")[0].split(",")[2]);
+	colorPart = colorVertA;
 }

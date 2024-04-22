@@ -1,11 +1,15 @@
 const colorVosonPrincipal   = "rgb(14, 16, 34)";
-const colorVosonParticula   = "rgb(45, 55, 95)";
 const colorVosonSecundario  = "rgb(255,111,0)";
+const colorVosonParticulaA   = colorVosonSecundario;//"rgb(45, 55, 95)";
+const colorVosonParticulaB   = colorVosonSecundario;
 const colorVosonFondo       = "rgb(255,255,255)";
 const colorIRPrincipal      = colorVosonPrincipal;
-const colorIRParticula      = colorVosonParticula;
 const colorIRSecundario     = colorVosonSecundario;
+const colorIRParticulaA      = colorVosonFondo;//colorVosonParticulaB;
+const colorIRParticulaB      = colorVosonFondo;
 const colorIRFondo          = colorVosonFondo; 
+const colorProyectoParticulaA = colorIRParticulaA;
+const colorProyectoParticulaB = colorIRParticulaB;
 const encabezadoTextoSeparacion = 30;
 const encabezadoTextoTamaño = 20;
 const encabezadoMargenHorizontal = 100;
@@ -13,6 +17,7 @@ const encabezadoMargenVertical = 15;
 const encabezadoContendio = 60;
 const encabezadoBienvenida = 0.15;
 const escalaMiniaturas = 1.75;
+const separacionMenuMovil = 90;
 
 const pieContenido = 60 ;
 var arrastreDeslizamiento = 1;

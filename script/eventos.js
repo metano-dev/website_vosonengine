@@ -14,7 +14,7 @@ function tocarMover(e)
 {
 	if (e.touches.length == 1)
 	{
-		console.log("evento: moviendo");
+		//console.log("evento: moviendo");
 		tou = e.touches[0];
 		cursor.tx = 0.6 * (tou.clientX/window.innerWidth  -0.5);
 		cursor.ty = 0.6 * (tou.clientY/window.innerHeight -0.5);
@@ -101,14 +101,18 @@ function deslizarRueda (event)
 
 function deslizar()
 {
-	console.log("evento: deslizando");
+	//console.log("evento: deslizando");
 	if (deslizamiento < -predeslizamiento)
 		deslizamiento = -predeslizamiento;
 	if (deslizamiento > deslizamientoMaximo)
 		deslizamiento = deslizamientoMaximo;
 	
-	if (deslizamiento < 0)
-		encabezado.ty = encabezadoInicio*window.innerHeight;
+	if (menuMovil == true)
+	{
+		encabezado.ty = (menu.length+1)*separacionMenuMovil;
+	}
+	else if (deslizamiento < 0)
+		encabezado.ty = encabezadoInicio*window.innerHeight*compensacion;
 	else encabezado.ty = encabezadoReducido;
 	
 	interpolacion = 0;
@@ -136,9 +140,9 @@ function deslizar()
 		}
 	}
 	if (deslizamiento > 0.6*deslizamientoMaximo)
-		colorPart = colorSecundario;
+		colorPart = colorVertB;
 	else if (deslizamiento < 0.4*deslizamientoMaximo)
-		colorPart = colorVert;
+		colorPart = colorVertA;
 	else
 	{
 		cR = colorPartR + Math.floor(dPartR*(deslizamiento-0.4*deslizamientoMaximo)/0.2/deslizamientoMaximo);
@@ -212,7 +216,7 @@ function popup (dir) {
 	{
 		ventana.style.backgroundImage = "url("+dir+")" ;
 		ventana.src = "";
-		console.log("imagen");
+		//console.log("imagen");
 		return;
 	}
 	if (formato == ".mp4")
@@ -231,17 +235,17 @@ function popup (dir) {
 		videoM.height   = fondo.height;
 		fondo.appendChild(videoM);
 		
-		console.log("video");
+		//console.log("video");
 		return;
 	}
 	ventana.style.backgroundImage = "" ;
 	ventana.src = dir + vimeoVars;
-	console.log("vimeo");
+	//console.log("vimeo");
 	return;
 }
 
 function popout () {
-	console.log("fin");
+	//console.log("fin");
 	var ventana = document.getElementById("ventana");
 	if (document.getElementById("video")) {ventana.removeChild(document.getElementById("video"));};
 }
