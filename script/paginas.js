@@ -5,12 +5,9 @@ function dirigir()
 	
 	if (urlExtra == "InfinityRoom")
 	{
-		cargarFuentes(0);
-		cargarLogos(0);
-		cargarFoto();
 		iniciarPagina(paginaInfinity);
 		redimensionar();
-		iterar();
+		cargarMedios();
 		return;
 	}
 	if (!urlExtra)

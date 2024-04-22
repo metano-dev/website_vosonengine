@@ -5,6 +5,8 @@ function cargarMedios()
 	cargarMiniaturas(0);
 	cargarPrevisualizaciones(0);
 	cargarClientes(0);
+	cargarLogos(0);
+	cargarFotos();
 	comprobarCarga();
 }
 
@@ -12,7 +14,9 @@ function comprobarCarga()
 {
 	if (	cargaClientes			== true
 	&&		cargaPrevisualizaciones	== true
-	&&		cargaFuentes			== true
+	&&		cargaPrevisualizaciones	== true
+	&&		cargaLogos				== true
+	&&		cargaFotos				== true
 	&& 		cargaMiniaturas			== true
 	&& 		cargaIconos				== true)
 	{
@@ -202,12 +206,12 @@ function DIBUJARfoto(x, y, h)
 
 }
 
-function cargarFoto ()
+function cargarFotos ()
 {
 	const ctx = lienzo.getContext("2d");
 	foto1 = new Image();
 	fotoM1 = new Image();
 	fotoM1.src = "fotos/3.jpg";
 	foto1.src = "fotos/3.jpg";
-	foto1.onload = () => {fotoN1 = ctx.createPattern(foto1, 'no-repeat')};
+	foto1.onload = () => {fotoN1 = ctx.createPattern(foto1, 'no-repeat'); cargaFotos = true;};
 }

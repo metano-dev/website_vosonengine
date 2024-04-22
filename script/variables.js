@@ -8,6 +8,8 @@ var cargaPrevisualizaciones = false;
 var cargaMiniaturas         = false;
 var cargaIconos             = false;
 var cargaFuentes            = false;
+var cargaLogos              = false;
+var cargaFotos              = false;
 var colorPrincipal;
 var colorVert;
 var colorSecundario;
