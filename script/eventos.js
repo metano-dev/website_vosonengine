@@ -4,7 +4,7 @@ function tocarIniciar(e)
 	{
 		cursor.click = true;
 		tou = e.touches[0];
-		cursor.ow = rotacion.tx + tou.clientX;
+		cursor.ow = rotacion.tx - tou.clientX;
 		cursor.oh = deslizamiento +tou.clientY/window.innerHeight;
 		parada = true;
 		movil = true;
@@ -18,6 +18,8 @@ function tocarMover(e)
 		tou = e.touches[0];
 		cursor.tx = 0.6 * (tou.clientX/window.innerWidth  -0.5);
 		cursor.ty = 0.6 * (tou.clientY/window.innerHeight -0.5);
+		cursor.x = cursor.tx;
+		cursor.y = cursor.ty;
 		rotacion.tx = cursor.ow +tou.clientX;
 		deslizamiento = cursor.oh - tou.clientY/window.innerHeight;
 		parada = true;

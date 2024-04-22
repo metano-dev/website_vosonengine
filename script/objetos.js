@@ -26,23 +26,23 @@ var menuPrincipal = [
 ];
 var menuInfinity = [
 	new navegador(1, "", 	TXTvoson),
-	new navegador(2, 2,		TXTproy1),
-	new navegador(3, 3,		TXTproy2),
-	new navegador(4, 4,		TXTcontactar)
+	new navegador(2, 4,		TXTproy1),
+	new navegador(3, 5,		TXTproy2),
+	new navegador(4, 6,		TXTcontactar)
 ];	
 var menuProyecto = [
 	new navegador(1, "",			TXTvoson),
 	new navegador(2, "InfinityRoom",TXTinifinity),
 	new navegador(3, 2, 			TXTcontacto)
 ];
-var modelosPrincipal = [modeloOculus, modeloVoson, modeloEspacio, modeloAleatorio, modeloOndas, modeloDinosaurio, modeloEspacio, modeloEspacio, modeloEspacio];
-var modelosInfinity = [modeloInfinity, modeloVoson, modeloRobot, modeloDinosaurio, modeloAleatorio];
-var modelosProyecto = [modeloRobot, modeloEspacio, modeloRobot, modeloVoson, modeloAleatorio];
+var modelosPrincipal = [modeloOculus,	modeloVoson,	modeloEspacio,	modeloAleatorio,	modeloOndas,		modeloDinosaurio, modeloEspacio, modeloEspacio, modeloEspacio];
+var modelosInfinity =  [modeloInfinity, modeloVoson,	modeloAleatorio,	modeloEspacio,	modeloRobot,	modeloDinosaurio,	modeloAleatorio,	modeloEspacio];
+var modelosProyecto =  [modeloRobot,	modeloEspacio,	modeloRobot,	modeloVoson,		modeloAleatorio,	modeloEspacio,	modeloAleatorio,	modeloEspacio];
 //FONDOS
 var paginaPrincipal = new pagina(
 	"principal",
 	[
-		new apartado(colorVosonFondo,	0.24),	//(oculus -> logo)
+		new apartado(false,	0.24),	//(oculus -> logo)
 		new apartado(colorVosonPrincipal,		0.24),	//proyecto (partículas)
 		new apartado(false,		0.20),	//freeroom (partículas2)
 		new apartado(colorVosonPrincipal,		0.12),	//nosotros (onditas)
@@ -62,15 +62,17 @@ var paginaPrincipal = new pagina(
 var paginaInfinity = new pagina(
 	"infinity",
 	[
-		new apartado("rgba(0,0,0,0.9)",		0.24),	// vídeo (logo infinity -> partículas)
+		new apartado("rgba(0,0,0,0.6)",		0.24),	// vídeo (logo infinity -> partículas)
+		new apartado("rgba(14, 16, 34, 0.8)",		0.24),	//diseñado
+		new apartado(colorIRPrincipal,		0.24),	//por que
 		new apartado(false,		0.24),	//toypark (modelo robot)
 		new apartado(false,	0.24),	//survival zombie (modelo zombie)
 		new apartado(false,		0.24),	//contacto (partículas)
 		new apartado(colorIRPrincipal,		0.24)	//pie
 	],
-	[0.8, 0.8, 0.2, 0.8, 0.2, 0.8, 0.1, 0.9, 0.1, 0.9],
+	[0.8, 0.8, 0.2, 0.2, 0.8, 0.2, 0.8, 0.1, 0.9, 0.1, 0.9],
 	modelosInfinity,
-	[videoPrincipal1, videoPrincipal2],
+	["proyectos/ToyPark/ToyPark_video.mp4", "proyectos/ZombieSurvival/ZombieSurvival_video.mp4"],
 	menuInfinity,
 	1,
 	0.9,

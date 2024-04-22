@@ -1,10 +1,12 @@
 function DIBUJARinfinity()
 {
     DIBUJARhub(apartados[0]);
-    DIBUJARzombie(apartados[1]);
-    DIBUJARtoypark(apartados[2]);
-    DIBUJARcontacto(apartados[3]);
-	DIBUJARpie(apartados[4]);
+    DIBUJARdiseñado(apartados[1]);
+    DIBUJARporque(apartados[2]);
+    DIBUJARtoy(apartados[3]);
+    DIBUJARzombie(apartados[4]);
+    DIBUJARcontacto(apartados[5]);
+	DIBUJARpie(apartados[6]);
 }
 
 function DIBUJARprincipal()
@@ -177,70 +179,153 @@ function DIBUJARhub(obj)
     sep = 5;
     orY = obj.y + 0.5*window.innerHeight*tamañoApartado -50 - 100*(horizontal!=true);
     wCuad = ejeY;
+    hLogo = 106;
     
-    txt1 = new texto(wCuad, TXTinfinity01, colorFondo, "left", "hanging", 45, 40, orX, 0,   fuenteM);
+    txt1 = new texto(wCuad, TXTinfinity01, colorFondo, "left", "hanging", 35, 40, orX, 0,   fuenteM);
     txt2 = new texto(wCuad, TXTinfinity02, colorFondo, "left", "hanging", 35, 30, orX, 0,   fuenteB);
-    txt3 = new texto(wCuad, TXTinfinity03, colorFondo, "left", "hanging", 20, 20, orX, 0,   fuenteR);
+    txt3 = new texto(wCuad, TXTinfinity03, colorFondo, "left", "hanging", 25, 25, orX, 0,   fuenteR);
 
     hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1] + MEDIRtexto(txt3)[1];
     txt1.y = orY;
     txt2.y = orY + MEDIRtexto(txt1)[1] + sep;
-    txt3.y = txt2.y + MEDIRtexto(txt2)[1] + sep;
+    txt3.y = txt2.y + MEDIRtexto(txt2)[1] + 2*sep + hLogo;
     wCuad = Math.max(...[MEDIRtexto(txt1)[0], MEDIRtexto(txt2)[0], MEDIRtexto(txt3)[0]]);
-    DIBUJARcuadro(colorPrincipal, 0.6, 0, orY - margen, wCuad + orX + margen, hCuad +2*margen + 2*sep);
+    DIBUJARcuadro(colorSecundario, 0.6, 0, orY - margen, wCuad + orX + margen, hCuad +2*margen + 3*sep + hLogo);
     DIBUJARtexto(txt1);
     DIBUJARtexto(txt2);
     DIBUJARtexto(txt3);
+    DIBUJARlogo(0, txt1.x, txt2.y+MEDIRtexto(txt2)[1]+sep, hLogo);
 }
-function DIBUJARtoypark(obj)
+function DIBUJARdiseñado(obj)
 {
     if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
 		return;
-    margen = 25/compensacion;
-    sep = 5;
-    orY = obj.y + 0.5*window.innerHeight*tamañoApartado -50 - 100*(horizontal!=true);
-    wCuad = 0.4*window.innerWidth-2*margen;
-    orX = window.innerWidth - margen -wCuad - 0.5*obj.y;
+    sep = 15;
+    orY = obj.y + 0.1*window.innerHeight*tamañoApartado;
+    wCuad = 0.5*window.innerWidth;
+    orX = 0.5*window.innerWidth - 0.5*obj.y;
     
-    txt1 = new texto(wCuad, "TOY PARK", colorFondo, "left", "hanging", 60, 50, orX, 0,   fuenteB);
-    txt2 = new texto(wCuad, "UNA AVENTURA DE JUGUETES", colorFondo, "left", "hanging", 25, 20, orX, 0,   fuenteM);
-    txt3 = new texto(wCuad, TXTinicio03, colorFondo, "left", "hanging", 20, 20, orX, 0,   fuenteR);
+    txt1  = new texto(wCuad, "Diseñado para hoteles, campings y más.", colorSecundario, "left", "hanging", 45, 40, orX, orY,   fuenteB);
+    txt2  = new texto(wCuad, "¡Haz que tus clientes sientan la emoción de lo real en un mundo virtual! ", colorFondo, "left", "hanging", 30, 30, orX, orY,   fuenteM);
 
-    DIBUJARcuadro(colorPrincipal, 1, window.innerWidth*0.6, obj.y, window.innerWidth*0.4+desborde, window.innerHeight*tamañoApartado);
-    hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1] + MEDIRtexto(txt3)[1];
-    txt1.y = orY;
-    txt2.y = orY + MEDIRtexto(txt1)[1] + sep;
-    txt3.y = txt2.y + MEDIRtexto(txt2)[1] + sep;
-    wCuad = Math.max(...[MEDIRtexto(txt1)[0], MEDIRtexto(txt2)[0], MEDIRtexto(txt3)[0]]);
-    //DIBUJARcuadro(colorFondo, 0.6, 0, orY - margen, wCuad + orX + margen, hCuad +2*margen + 2*sep);
+    txt1.x = orX - 0.5*MEDIRtexto(txt1)[0];
+    txt2.x = orX - 0.5*MEDIRtexto(txt2)[0];
+    txt2.y = txt1.y + MEDIRtexto(txt1)[1] + sep;
+    DIBUJARtexto(txt1);
+    DIBUJARtexto(txt2);
+
+    DIBUJARfoto(0.3*window.innerWidth- 0.5*obj.y, txt2.y + MEDIRtexto(txt2)[1] + 30, 0.4*window.innerWidth/1.6);
+}
+function DIBUJARporque(obj)
+{
+    if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
+		return;
+
+    dist = 120;
+    long = 0;
+    tot = 0;
+    alt = 110;
+    for(k=1; k<logosIMG.length; k++)
+        tot += logosIMG[k].width * alt / logosIMG[k].height + dist;
+    for(m=1; m<logosIMG.length; m++)
+    {
+        desf = 0;
+        while ( 50 +long +desf +rotacion.x > window.innerWidth)
+            desf -= tot;
+        DIBUJARlogo(m, 50 +long +desf +rotacion.x, obj.y -alt - 20, alt);
+        long += logosIMG[m].width * alt / logosIMG[m].height + dist;
+    }
+
+    sep = 15;
+    orY = obj.y + 0.2*window.innerHeight*tamañoApartado;
+    wCuad = (0.9+(compensacion > 1)*0.05)*window.innerWidth;
+    orX = 0.5*window.innerWidth -0.5*wCuad + 0.5*obj.y;
+    
+    txt1  = new texto(wCuad, "¿Por qué Infinity Room?", colorFondo, "left", "hanging", 45, 40, orX, orY,   fuenteM);
+    txt2  = new texto(wCuad, "1.Calidad", colorSecundario, "left", "hanging", 30, 30, orX, 0,   fuenteB);
+    txt3  = new texto(wCuad, "Experiencias cómodas, sin mochilas ni dispositivos extras.", colorFondo, "left", "hanging", 30, 30, orX, 0,   fuenteR);
+    txt4  = new texto(wCuad, "2.Facilidad", colorSecundario, "left", "hanging", 30, 30, orX, 0,   fuenteB);
+    txt5  = new texto(wCuad, "Montado en 30 minutos. Desmontado en 10 min.", colorFondo, "left", "hanging", 30, 30, orX, 0,   fuenteR);
+    txt6  = new texto(wCuad, "3.Diversión", colorSecundario, "left", "hanging", 30, 30, orX, 0,   fuenteB);
+    txt7  = new texto(wCuad, "Validado constantemente por nuestros usuarios.", colorFondo, "left", "hanging", 30, 30, orX, 0,   fuenteR);
+    txt8  = new texto(wCuad, "4.Precisión", colorSecundario, "left", "hanging", 30, 30, orX, 0,   fuenteB);
+    txt9  = new texto(wCuad, "Adaptamos todo para que no existan colisiones.", colorFondo, "left", "hanging", 30, 30, orX, 0,   fuenteR);
+    txt10 = new texto(wCuad, "En tan sólo 7x5 metros contarás con una habitación infinita.", colorSecundario, "left", "hanging", 40, 45, orX, 0,   fuenteB);
+
+
+    if (compensacion == 1)
+    {
+        txt2.y = txt1.y + MEDIRtexto(txt1)[1] +6*sep;
+        txt3.y = txt2.y;
+        txt3.x = txt2.x + MEDIRtexto(txt2)[0] +sep;
+        txt4.y = txt3.y + MEDIRtexto(txt3)[1] +sep;
+        txt5.y = txt4.y;
+        txt5.x = txt4.x + MEDIRtexto(txt4)[0] +sep;
+        txt6.y = txt5.y + MEDIRtexto(txt5)[1] +sep;
+        txt7.y = txt6.y;
+        txt7.x = txt6.x + MEDIRtexto(txt6)[0] +sep;
+        txt8.y = txt7.y + MEDIRtexto(txt7)[1] +sep;
+        txt9.y = txt8.y;
+        txt9.x = txt8.x + MEDIRtexto(txt8)[0] +sep;
+        txt10.y = txt9.y + MEDIRtexto(txt9)[1] +6*sep;
+    }
+    else
+    {
+
+    }
+    
     DIBUJARtexto(txt1);
     DIBUJARtexto(txt2);
     DIBUJARtexto(txt3);
+    DIBUJARtexto(txt4);
+    DIBUJARtexto(txt5);
+    DIBUJARtexto(txt6);
+    DIBUJARtexto(txt7);
+    DIBUJARtexto(txt8);
+    DIBUJARtexto(txt9);
+    DIBUJARtexto(txt10);
+}
+function DIBUJARtoy(obj)
+{
+    if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
+		return;
+    orX = 50 + 0.5*obj.y;
+    margen = 25;
+    sep = 5;
+    orY = obj.y + 0.5*window.innerHeight*tamañoApartado -50 - 100*(horizontal!=true);
+    wCuad = ejeY;
+    
+    txt1 = new texto(wCuad, TXTtoy01, colorFondo, "left", "hanging", 45, 40, orX, 0,   fuenteB);
+    txt2 = new texto(wCuad, TXTtoy02, colorFondo, "left", "hanging", 25, 30, orX, 0,   fuenteL);
+
+    hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1];
+    txt1.y = orY;
+    txt2.y = orY + MEDIRtexto(txt1)[1] + sep;
+    wCuad = Math.max(...[MEDIRtexto(txt1)[0], MEDIRtexto(txt2)[0]]);
+    DIBUJARcuadro(colorSecundario, 0.6, 0, orY - margen, wCuad + orX + margen, hCuad +2*margen + sep);
+    DIBUJARtexto(txt1);
+    DIBUJARtexto(txt2);
 }
 function DIBUJARzombie(obj)
 {
     if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
 		return;
-    margen = 25/compensacion;
-    orX = margen + 0.5*obj.y;
+    margen = 25;
     sep = 5;
     orY = obj.y + 0.5*window.innerHeight*tamañoApartado -50 - 100*(horizontal!=true);
-    wCuad = 0.4*window.innerWidth-2*margen;
+    wCuad = ejeY;
+    orX = window.innerWidth -wCuad - 0.5*obj.y;
     
-    txt1 = new texto(wCuad, "ZOMBIE SURVIVOR", colorPrincipal, "left", "hanging", 60, 50, orX, 0,   fuenteB);
-    txt2 = new texto(wCuad, "ENFRÉNTATE AL APOCALIPSIS", colorPrincipal, "left", "hanging", 25, 20, orX, 0,   fuenteM);
-    txt3 = new texto(wCuad, TXTinicio03, colorPrincipal, "left", "hanging", 20, 20, orX, 0,   fuenteR);
+    txt1 = new texto(wCuad, TXTzombie01, colorFondo, "left", "hanging", 45, 40, orX, 0,   fuenteB);
+    txt2 = new texto(wCuad, TXTzombie02, colorFondo, "left", "hanging", 25, 30, orX, 0,   fuenteL);
 
-    DIBUJARcuadro(colorFondo, 1, -desborde, obj.y, window.innerWidth*0.4, window.innerHeight*tamañoApartado);
-    hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1] + MEDIRtexto(txt3)[1];
+    hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1];
     txt1.y = orY;
     txt2.y = orY + MEDIRtexto(txt1)[1] + sep;
-    txt3.y = txt2.y + MEDIRtexto(txt2)[1] + sep;
-    wCuad = Math.max(...[MEDIRtexto(txt1)[0], MEDIRtexto(txt2)[0], MEDIRtexto(txt3)[0]]);
-    //DIBUJARcuadro(colorFondo, 0.6, 0, orY - margen, wCuad + orX + margen, hCuad +2*margen + 2*sep);
+    wCuad = Math.max(...[MEDIRtexto(txt1)[0], MEDIRtexto(txt2)[0]]);
+    DIBUJARcuadro(colorSecundario, 0.6, orX-50, orY - margen, wCuad + orX + margen, hCuad +2*margen + sep);
     DIBUJARtexto(txt1);
     DIBUJARtexto(txt2);
-    DIBUJARtexto(txt3);
 }
 //===========APARTADOS
 function DIBUJARinicio(obj)
@@ -286,7 +371,7 @@ function DIBUJARproyectos(obj)
     for(m=0; m<listaProyectos.length; m++)
     {
         desf = 0;
-        while ( orX +desf + m*(sep+wCuad)> window.innerWidth)
+        while ( orX +desf + m*(sep+wCuad)> 1.5*window.innerWidth)
             desf -= listaProyectos.length*(wCuad+sep);
         txt1 = new texto(wCuad, listaProyectos[m].nombre, colorPrincipal, "center", "hanging", 20*listaProyectos[m].e, 18, orX +desf +curs+ m*(sep+wCuad)+0.5*wCuad, 0,   fuenteM);
         txt1.y = orY+hCuad - MEDIRtexto(txt1)[1] - margen;

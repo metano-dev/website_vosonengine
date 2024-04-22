@@ -2,10 +2,10 @@ const colorVosonPrincipal   = "rgb(14, 16, 34)";
 const colorVosonParticula   = "rgb(45, 55, 95)";
 const colorVosonSecundario  = "rgb(255,111,0)";
 const colorVosonFondo       = "rgb(255,255,255)";
-const colorIRPrincipal      = "rgb(14, 16, 34)";
-const colorIRParticula      = "rgb(45, 55, 95)";
-const colorIRSecundario     = "rgb(255,111,0)";
-const colorIRFondo          = "rgb(255,255,255)"; 
+const colorIRPrincipal      = colorVosonPrincipal;
+const colorIRParticula      = colorVosonParticula;
+const colorIRSecundario     = colorVosonSecundario;
+const colorIRFondo          = colorVosonFondo; 
 const encabezadoTextoSeparacion = 30;
 const encabezadoTextoTamaño = 20;
 const encabezadoMargenHorizontal = 100;
@@ -64,35 +64,21 @@ const TXTpie03 = "Política de privacidad";
 const TXTpie04 = "+34 690 216 542";
 const TXTpie05 = "hola@vosonengine.com";
 
-//==================PÁGINA INFINITY ROOM========================
-////APARTADOS
-const TXTvoson      = "Sobre Voson";
-const TXTproy1      = "Toy Park";
-const TXTproy2      = "Zombie Survival";
-const TXTcontactar  = "Contacto";
+//======================================
 
-const TXTinfinity01 = "INFINITAS EXPERIENCIAS";
-const TXTinfinity02 = "EN UN ÚNICO LUGAR";
-const TXTinfinity03 = "Hacemos experiencias en realidad virtual para que hasta 6 personas jueguen a la vez, interactuando en el mismo espacio físico.";
-
-
-//==================PÁGINA PRINCIPAL========================
-/*
-new proyecto("NOMBRE DEL JUEGO SIN ESPACIOS",
-        "NOMBRE DEL JUEGO TAL Y COMO QUIERES QUE SE VEA",
-        "DESCRIPCIÓN"
-        ["objetivo 1", "objetivo 2", "objetivo 3", "...."],
-        ["solución1", "solución 2", "..."],
-        "https://player.vimeo.com/video/890986261"
-    ),
-*/
-//==========================================================
 const listaProyectos = [
     new proyecto("ZombieSurvival",
         "Zombie Survival",
         "Este videojuego reúne hasta 6 jugadores que se sumergirán en una emocionante apocalipsis zombi. Esta experiencia despierta el el instinto de equipo y la acción comenzará en una iglesia desolada. Una puerta se abre, revelando un gigantesco zombie con hacha. Tras él, hordas de zombies invaden el espacio desde todas las direcciones. Los jugadores deberán repara barricadas, coordinar estrategias y sobrevivir al caos. ¿Los equipos resistirán el asedio? ¡La cuenta regresiva para la supervivencia ha comenzado!",
         ["Inmersión total", "Interacción en grupo", "Variedad de entornos"],
         ["Gráficos realistas", "Cooperación en tiempo real", "Escenarios dinámicos", "Modo multijugador competitivo"],
+        "https://player.vimeo.com/video/890986261"
+    ),
+    new proyecto("ToyPark",
+        "ToyPark",
+        "¡Sobrevive al mundo mágico de Toy Park! En este emocionante juego de supervivencia, unos adorables juguetes  se han convertido en feroces zombies. Los  jugadores deberán unir sus fuerzas para desmontarlos y devolverles su encanto perdido. A lo largo de tu aventura, te enfrentarás a una variedad de desafíos y enemigos cada vez más peligrosos. Toy Park te sumergirá en un mundo vibrante y lleno de acción donde la supervivencia depende de tu habilidad para trabajar en equipo y enfrentarte a lo desconocido. Pero la aventura no termina ahí. En la última etapa del juego, te enfrentarás a tu mayor desafío hasta ahora: una emocionante batalla en una habitación contra un robot gigante. ¿Tendréis tú y tu equipo la valentía suficiente para derrotarlo?",
+        ["Experiencia inmersiva y divertida", "Interacción en grupo", "Atractivo para todas las edades"],
+        ["Gráficos realistas", "Cooperación en tiempo real", "Compromiso en equipo"],
         "https://player.vimeo.com/video/890986261"
     ),
     new proyecto("FridaKahlo",
@@ -137,11 +123,35 @@ const listaProyectos = [
         ["Escaneado y modelado detallado", "Rutas virtuales guiadas", "Integración de elementos culturales"],
         "https://player.vimeo.com/video/890986261"
     ),
-    new proyecto("ToyPark",
-        "Toy Park",
-        "¡Sobrevive al mundo mágico de Toy Park! En este emocionante juego de supervivencia, unos adorables juguetes  se han convertido en feroces zombies. Los  jugadores deberán unir sus fuerzas para desmontarlos y devolverles su encanto perdido. A lo largo de tu aventura, te enfrentarás a una variedad de desafíos y enemigos cada vez más peligrosos. Toy Park te sumergirá en un mundo vibrante y lleno de acción donde la supervivencia depende de tu habilidad para trabajar en equipo y enfrentarte a lo desconocido. Pero la aventura no termina ahí. En la última etapa del juego, te enfrentarás a tu mayor desafío hasta ahora: una emocionante batalla en una habitación contra un robot gigante. ¿Tendréis tú y tu equipo la valentía suficiente para derrotarlo?",
-        ["Experiencia inmersiva y divertida", "Interacción en grupo", "Atractivo para todas las edades"],
-        ["Gráficos realistas", "Cooperación en tiempo real", "Compromiso en equipo"],
+];
+
+
+//==================PÁGINA INFINITY ROOM========================
+////APARTADOS
+const TXTvoson      = "Sobre Voson";
+const TXTproy1      = "Toy Park";
+const TXTproy2      = "Zombie Survival";
+const TXTcontactar  = "Contacto";
+
+const TXTinfinity01 = "INFINITAS EXPERIENCIAS";
+const TXTinfinity02 = "EN UN ÚNICO LUGAR";
+const TXTinfinity03 = "Hacemos experiencias en realidad virtual para que hasta 6 personas jueguen a la vez, interactuando en el mismo espacio físico. ";
+
+const TXTzombie01 = "ZOMBIE SURVIVAL";
+const TXTzombie02 = "Seis jugadores luchan juntos en un apocalipsis zombie. La acción comienza en una iglesia, enfrentando hordas de muertos vivientes y coordinando estrategias para sobrevivir. ¿Resistirán el asedio y la cuenta regresiva para sobrevivir?";
+const TXTtoy01 = "TOYPARK";
+const TXTtoy02 = "En Toy Park, juguetes adorables se han vuelto zombies y los jugadores deben unirse para desmontarlos. Tendrán que derrotarlos y enfrentarse a desafíos cada vez mayores. La aventura culmina en una batalla contra un robot gigante. ¿Podrás derrotarlo con tu equipo?";
+
+
+//==================PÁGINA PRINCIPAL========================
+/*
+new proyecto("NOMBRE DEL JUEGO SIN ESPACIOS",
+        "NOMBRE DEL JUEGO TAL Y COMO QUIERES QUE SE VEA",
+        "DESCRIPCIÓN"
+        ["objetivo 1", "objetivo 2", "objetivo 3", "...."],
+        ["solución1", "solución 2", "..."],
         "https://player.vimeo.com/video/890986261"
     ),
-];
+*/
+//==========================================================
+

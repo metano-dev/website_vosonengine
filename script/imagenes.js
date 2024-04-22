@@ -60,13 +60,22 @@ function cargarIconos (i)
 {
 	const ctx = lienzo.getContext("2d");
 	eval("var ico"+ i +"= new Image();");
-	eval("ico" + i + ".src = iconosSRC["+ i +"];");
+	eval("ico" + i + ".src = 'iconos/' + iconosSRC["+ i +"];");
 	eval("ico" + i + ".onload = () => {iconosPAT.push(ctx.createPattern(ico"+i+", 'no-repeat'));"
 	+"iconosIMG.push(ico"+i+");"
 	+"if ("+i+"< iconosSRC.length-1) {cargarIconos("+(i+1)+")} else cargaIconos = true;"
 	+"}");
 }
-
+function cargarLogos (i)
+{
+	const ctx = lienzo.getContext("2d");
+	eval("var log"+ i +"= new Image();");
+	eval("log" + i + ".src = 'logos/' + logosSRC["+ i +"];");
+	eval("log" + i + ".onload = () => {logosPAT.push(ctx.createPattern(log"+i+", 'no-repeat'));"
+	+"logosIMG.push(log"+i+");"
+	+"if ("+i+"< logosSRC.length-1) {cargarLogos("+(i+1)+")} else cargaLogos = true;"
+	+"}");
+}
 
 function DIBUJARicono (i, x, y, w, h)
 {
@@ -117,10 +126,10 @@ function DIBUJARminiatura (i, x, y, w, h)
 			obj.te = escalaMiniaturas;
 			parada = true;
 			sobre = true;
-			if (x+w > window.innerWidth)
+			if (x+w > window.innerWidth && compensacion == 1)
 				rotacion.tx -= 20;
 			
-			if (x < 0)
+			if (x < 0 && compensacion == 1)
 				rotacion.tx += 20;
 			if (cursor.click ==  true) {
 				obj.click = true;
@@ -154,4 +163,51 @@ function DIBUJARminiatura (i, x, y, w, h)
 	ctx.lineTo(x, y+h);
 	ctx.closePath();
 	ctx.fill();
+}
+
+function DIBUJARlogo (i, x, y, h)
+{
+	const ctx = lienzo.getContext("2d");
+	orW = logosIMG[i].width;
+	orH = logosIMG[i].height;
+	e = h/orH;
+	matrix = new DOMMatrixReadOnly().scale(e).translate(x/e,y/e);
+	logosPAT[i].setTransform(matrix);
+	ctx.fillStyle = logosPAT[i];
+	ctx.beginPath();
+	ctx.moveTo(x, y);
+	ctx.lineTo(x+orW*e, y);
+	ctx.lineTo(x+orW*e, y+h);
+	ctx.lineTo(x, y+h);
+	ctx.closePath();
+	ctx.fill();
+}
+
+function DIBUJARfoto(x, y, h)
+{
+	const ctx = lienzo.getContext("2d");
+	orW = fotoM1.width;
+	orH = fotoM1.height;
+	e = h/orH;
+	matrix = new DOMMatrixReadOnly().scale(e).translate(x/e,y/e);
+	fotoN1.setTransform(matrix);
+	ctx.fillStyle = fotoN1;
+	ctx.beginPath();
+	ctx.moveTo(x, y);
+	ctx.lineTo(x+orW*e, y);
+	ctx.lineTo(x+orW*e, y+h);
+	ctx.lineTo(x, y+h);
+	ctx.closePath();
+	ctx.fill();
+
+}
+
+function cargarFoto ()
+{
+	const ctx = lienzo.getContext("2d");
+	foto1 = new Image();
+	fotoM1 = new Image();
+	fotoM1.src = "fotos/3.jpg";
+	foto1.src = "fotos/3.jpg";
+	foto1.onload = () => {fotoN1 = ctx.createPattern(foto1, 'no-repeat')};
 }

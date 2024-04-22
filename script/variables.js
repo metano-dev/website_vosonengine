@@ -1,5 +1,7 @@
 //VARIABLES INDEPENDIENTES
 const fps = 24 ;
+var fotoM1;
+var fotoN1;
 var compensacion = 1;
 var cargaClientes           = false;
 var cargaPrevisualizaciones = false;
@@ -23,7 +25,10 @@ var videoN = "";
 var videos = [];
 var iconosIMG = [];
 var iconosPAT = [];
-var iconosSRC = ["iconos/icono1.png", "iconos/icono2.png", "iconos/icono3.png"];
+var iconosSRC = ["icono1.png", "icono2.png", "icono3.png"];
+var logosIMG = [];
+var logosPAT = [];
+var logosSRC = ["InfinityRoom_logo.png", "Guitart_logo.png", "LaBallenaAlegre_logo.png", "Melia_logo.png", "PiramideSalou_logo.png", "PoloDigital_logo.png", "PortAventura_logo.png", "Tamarit_logo.png"];
 var miniaturasIMG = [];
 var miniaturasPAT = [];
 var miniaturasSRC = [];

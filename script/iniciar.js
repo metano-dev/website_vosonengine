@@ -16,7 +16,7 @@ function iterar()
 }	
 function rotar()
 {
-	if (parada != true && tocando != true)
+	if (parada != true && tocando != true && compensacion == 1)
 		rotacion.tx += 300;
 	setTimeout(rotar, 2000);
 }
