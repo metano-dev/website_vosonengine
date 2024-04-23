@@ -37,7 +37,7 @@ var menuProyecto = [
 ];
 var modelosTodos = [	modeloVoson,	modeloInfinity, modeloEspacio,	modeloAleatorio,	modeloOculus, modeloOndas,		modeloDinosaurio, modeloRobot];
 var modelosPrincipal = [modeloOculus,	modeloVoson,	modeloEspacio,	modeloAleatorio,	modeloOndas,		modeloDinosaurio, modeloEspacio, modeloEspacio, modeloEspacio];
-var modelosInfinity =  [modeloInfinity, modeloVoson,	modeloAleatorio,	modeloEspacio,	modeloRobot,	modeloDinosaurio,	modeloAleatorio,	modeloEspacio];
+var modelosInfinity =  [modeloInfinity, modeloVoson,	modeloAleatorio,	modeloEspacio,	modeloAleatorio,	modeloEspacio,	modeloAleatorio,	modeloEspacio];
 var modelosProyecto =  [modeloRobot,	modeloEspacio,	modeloRobot,	modeloVoson,		modeloAleatorio,	modeloEspacio,	modeloAleatorio,	modeloEspacio];
 //FONDOS
 var paginaPrincipal = new pagina(
