@@ -73,7 +73,7 @@ var paginaInfinity = new pagina(
 	],
 	[0.8, 0.6, 0.2, 0.2, 0.8, 0.2, 0.8, 0.1, 0.9, 0.1, 0.9],
 	modelosInfinity,
-	["proyectos/ToyPark/ToyPark_video.mp4", "proyectos/ZombieSurvival/ZombieSurvival_video.mp4"],
+	["videos/InfinityRoom_video.mp4", "proyectos/ZombieSurvival/ZombieSurvival_video.mp4"],
 	menuInfinity,
 	1,
 	0.9,
