@@ -6,7 +6,7 @@ var encabezado = new banda(encabezadoBienvenida*window.innerHeight);
 
 //VÉRTICES
 var modelo00 = [];
-var modeloInvisible[];
+var modeloInvisible = [];
 for (i=0; i < verticesMaximos; i++)
 {
 	modeloInvisible.push(new vertice(Math.floor(Math.random()*1)*2*espacio - espacio, Math.floor(Math.random()*1)*2*espacio - espacio, Math.floor(Math.random()*1)*2*espacio - espacio));
