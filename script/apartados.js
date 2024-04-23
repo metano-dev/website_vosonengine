@@ -471,7 +471,18 @@ function DIBUJARpie(obj)
         txtPie[m].x = txtPie[m-1].x + MEDIRtexto(txtPie[m-1])[0] + sep;
     for (m=0; m<txtPie.length; m++)
         DIBUJARtexto(txtPie[m]);
-    
+	
+   
+	if (orY + 3*tam > cursor.h && cursor.h > orY )
+	{
+		if (cursor.click ==  true) 
+			obj.click = true;
+		if (cursor.click == false && obj.click == true)
+			window.location = urlRaiz + "/documentos/AvisoLegal.pdf";
+	}
+	if (cursor.click == false)
+		obj.click = false;
+	
     txtPie = [
         new texto(800, TXTpie04, colorSecundario, "left", "hanging", tam, 25, orX + 100, orY+tam*1.15, fuenteR),
         new texto(800, TXTpie05, colorSecundario, "left", "hanging", tam, 25, orX + 100, orY+tam*1.15, fuenteB)
