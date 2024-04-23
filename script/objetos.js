@@ -7,9 +7,10 @@ var encabezado = new banda(encabezadoBienvenida*window.innerHeight);
 //VÉRTICES
 var modelo00 = [];
 for (i=0; i < verticesMaximos; i++)
-	modelo00.push(new vertice(-2*espacio, -2*espacio, -2*espacio));
-	//modelo00.push(new vertice(2*Math.random()*espacio-espacio, 2*Math.random()*espacio-espacio, 2*Math.random()*espacio-espacio));
-
+{
+	modeloInvisible.push(new vertice(Math.floor(Math.random()*1)*2*espacio - espacio, Math.floor(Math.random()*1)*2*espacio - espacio, Math.floor(Math.random()*1)*2*espacio - espacio));
+	modelo00.push(new vertice(2*Math.random()*espacio-espacio, 2*Math.random()*espacio-espacio, 2*Math.random()*espacio-espacio));
+}
 var modeloEspacio = [];
 for (i=0; i < verticesMaximos; i++)
 	modeloEspacio.push(new vertice(2*Math.random()*espacio-espacio, 2*Math.random()*espacio-espacio, 2*Math.random()*espacio-espacio));
@@ -38,7 +39,7 @@ var menuProyecto = [
 ];
 var modelosTodos = [	modeloVoson,	modeloInfinity, modeloEspacio,	modeloAleatorio,	modeloOculus, modeloOndas,		modeloDinosaurio, modeloRobot];
 var modelosPrincipal = [modeloOculus,	modeloVoson,	modeloEspacio,	modeloAleatorio,	modeloOndas,		modeloDinosaurio, modeloEspacio, modeloEspacio, modeloEspacio];
-var modelosInfinity =  [modeloInfinity, modeloVoson,	modeloAleatorio,	modeloEspacio,	modelo00,	modelo00,	modelo00,	modelo00];
+var modelosInfinity =  [modeloInfinity, modeloVoson,	modeloAleatorio,	modeloEspacio,	modeloInvisible,	modeloInvisible,	modeloInvisible,	modeloInvisible];
 var modelosProyecto =  [modeloRobot,	modeloEspacio,	modeloRobot,	modeloVoson,		modeloAleatorio,	modeloEspacio,	modeloAleatorio,	modeloEspacio];
 //FONDOS
 var paginaPrincipal = new pagina(
