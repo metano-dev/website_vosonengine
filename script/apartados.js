@@ -442,7 +442,7 @@ function DIBUJARcontacto(obj)
 			}
 			if (cursor.click == false && obj.click == true)
 			{
-				window.location.href = "https://wa.link/1vhwbf";
+				window.location.href = "mailto:hola@vosonengine.com";
 			}
 		}
     INTERPOLACIONhiperbolicaE(obj);
