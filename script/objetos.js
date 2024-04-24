@@ -39,9 +39,9 @@ var menuProyecto = [
 	new navegador(3, 3, 			TXTcontacto)
 ];
 var modelosTodos = [	modeloVoson,	modeloInfinity, modeloEspacio,	modeloAleatorio,	modeloOculus, modeloOndas,		modeloDinosaurio, modeloRobot];
-var modelosPrincipal = [modeloOculus,	modeloVoson,	modeloEspacio,	modeloAleatorio,	modeloOndas,		modeloDinosaurio, modeloEspacio, modeloEspacio, modeloEspacio];
-var modelosInfinity =  [modeloInfinity, modeloVoson,	modeloAleatorio,	modeloEspacio,	modeloInvisible,	modeloInvisible,	modeloInvisible,	modeloInvisible];
-var modelosProyecto =  [modeloRobot,	modeloEspacio,	modeloRobot,	modeloVoson,		modeloAleatorio,	modeloEspacio,	modeloAleatorio,	modeloEspacio];
+var modelosPrincipal = [modeloOculus,	modeloVoson,	modeloEspacio,		modeloInvisible,	modeloInvisible,	modeloInvisible, 	modeloInvisible, 	modeloInvisible, modeloInvisible];
+var modelosInfinity =  [modeloInfinity, modeloVoson,	modeloInvisible,	modeloInvisible,	modeloInvisible,	modeloInvisible,	modeloInvisible,	modeloInvisible];
+var modelosProyecto =  [modeloRobot,	modeloEspacio,	modeloInvisible,	modeloInvisible,	modeloInvisible,	modeloInvisible,	modeloInvisible,	modeloInvisible];
 //FONDOS
 var paginaPrincipal = new pagina(
 	"principal",
@@ -50,7 +50,7 @@ var paginaPrincipal = new pagina(
 		new apartado(colorVosonPrincipal,		1,0.24),	//proyecto (partículas)
 		new apartado(false,		1,0.20),	//freeroom (partículas2)
 		new apartado(colorVosonPrincipal,		1,0.12),	//nosotros (onditas)
-		new apartado(colorVosonFondo,	1,0.12),	//valores (dinosaurio)
+		new apartado(colorVosonFondo,	0.3,0.12),	//valores (dinosaurio)
 		new apartado(false,		1,0.2),	//contacto (partículas)
 		new apartado(colorVosonPrincipal,		1,0.2)	//pie 
 	],
