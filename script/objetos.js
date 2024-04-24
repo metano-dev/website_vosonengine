@@ -30,8 +30,7 @@ var menuPrincipal = [
 var menuInfinity = [
 	new navegador(1, "", 	TXTvoson),
 	new navegador(2, 4,		TXTproy1),
-	new navegador(3, 5,		TXTproy2),
-	new navegador(4, 6,		TXTcontactar)
+	new navegador(3, 6,		TXTcontactar)
 ];	
 var menuProyecto = [
 	new navegador(1, "",			TXTvoson),
