@@ -88,7 +88,7 @@ function DIBUJARhub(obj)
     //DIBUJARtexto(txt1);
     //DIBUJARtexto(txt2);
     DIBUJARtexto(txt3);
-    DIBUJARlogo(0, txt1.x, 0*txt2.y+0*MEDIRtexto(txt2)[1]+sep, hLogo);
+    DIBUJARlogo(0, txt1.x, oY, hLogo);
 }
 function DIBUJARdiseñado(obj)
 {
