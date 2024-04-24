@@ -23,8 +23,8 @@ for (i=0; i < verticesMaximos; i++)
 var menuPrincipal = [
 	new navegador(1, 1, 			TXTinicio),
 	new navegador(2, "InfinityRoom",	TXTinifinity),
-	new navegador(3, 4, 			TXTnosotros),
-	new navegador(4, 2, 	TXTproyectos),
+	new navegador(3, 2, 			TXTproyectos),
+	new navegador(4, 4, 			TXTnosotros),
 	new navegador(5, 6, 			TXTcontacto)
 ];
 var menuInfinity = [
