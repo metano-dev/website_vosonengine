@@ -48,14 +48,14 @@ function DIBUJARjuego(obj)
     for (m=0; m<listaProyectos[proyectoActual].objetivos.length; m++)
     {
         var txt5 = new texto(0.5*wCuad, "•" + listaProyectos[proyectoActual].objetivos[m], colorSecundario, "left", "hanging", 20*compensacion, 20*compensacion, txt3.x + 10, txt3.y + MEDIRtexto(txt3)[1]+ sep +sY,    fuenteR);
-        sY += compensacion*MEDIRtexto(txt5)[1];
+        sY += compensacion*MEDIRtexto(txt5)[1]+sep;
         DIBUJARtexto(txt5);
     }
     sY = 0;
     for (m=0; m<listaProyectos[proyectoActual].soluciones.length; m++)
     {
         var txt6 = new texto(0.5*wCuad, "•" + listaProyectos[proyectoActual].soluciones[m], colorSecundario, "left", "hanging", 20*compensacion, 20*compensacion, txt4.x + 10, txt4.y + MEDIRtexto(txt4)[1] +sep +sY,    fuenteR);
-        sY += compensacion*MEDIRtexto(txt6)[1];
+        sY += compensacion*MEDIRtexto(txt6)[1]+sep;
         DIBUJARtexto(txt6);
     }
     DIBUJARcliente(0, 0.5*window.innerWidth - 0.5*clientesIMG[0].width*120/clientesIMG[0].height, Math.max(txt5.y, txt6.y)+ 100, 120);
