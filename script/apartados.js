@@ -137,16 +137,16 @@ function DIBUJARporque(obj)
     wCuad = (0.9+(compensacion > 1)*0.01)*window.innerWidth;
     orX = 0.5*window.innerWidth -0.5*wCuad + 0.5*obj.y;
     
-    txt1  = new texto(wCuad, "¿Por qué Infinity Room?", colorFondo, "left", "hanging",      45*comp, 40*comp, orX, orY,   fuenteM);
-    txt2  = new texto(wCuad, "1.Calidad", colorSecundario, "left", "hanging",               30*comp, 30*comp, orX, 0,   fuenteB);
-    txt3  = new texto(wCuad, "Experiencias cómodas, sin mochilas ni dispositivos extras.", colorFondo, "left", "hanging",           30*comp, 30*comp, orX, 0,   fuenteR);
-    txt4  = new texto(wCuad, "2.Facilidad", colorSecundario, "left", "hanging",             30*comp, 30*comp, orX, 0,   fuenteB);
-    txt5  = new texto(wCuad, "Montado en 30 minutos. Desmontado en 10 min.", colorFondo, "left", "hanging",                         30*comp, 30*comp, orX, 0,   fuenteR);
-    txt6  = new texto(wCuad, "3.Diversión", colorSecundario, "left", "hanging",             30*comp, 30*comp, orX, 0,   fuenteB);
-    txt7  = new texto(wCuad, "Validado constantemente por nuestros usuarios.", colorFondo, "left", "hanging",                       30*comp, 30*comp, orX, 0,   fuenteR);
-    txt8  = new texto(wCuad, "4.Precisión", colorSecundario, "left", "hanging",             30*comp, 30*comp, orX, 0,   fuenteB);
-    txt9  = new texto(wCuad, "Adaptamos todo para que no existan colisiones.", colorFondo, "left", "hanging",                       30*comp, 30*comp, orX, 0,   fuenteR);
-    txt10 = new texto(wCuad, "En tan sólo 7x5 metros contarás con una habitación infinita.", colorSecundario, "left", "hanging",    40*comp, 45*comp, orX, 0,   fuenteB);
+    txt1  = new texto(wCuad, TXTporque1  , colorFondo, "left", "hanging",      45*comp, 40*comp, orX, orY,   fuenteM);
+    txt2  = new texto(wCuad, TXTporque2  , colorSecundario, "left", "hanging",               30*comp, 30*comp, orX, 0,   fuenteB);
+    txt3  = new texto(wCuad, TXTporque3  , colorFondo, "left", "hanging",           30*comp, 30*comp, orX, 0,   fuenteR);
+    txt4  = new texto(wCuad, TXTporque4  , colorSecundario, "left", "hanging",             30*comp, 30*comp, orX, 0,   fuenteB);
+    txt5  = new texto(wCuad, TXTporque5  , colorFondo, "left", "hanging",                         30*comp, 30*comp, orX, 0,   fuenteR);
+    txt6  = new texto(wCuad, TXTporque6  , colorSecundario, "left", "hanging",             30*comp, 30*comp, orX, 0,   fuenteB);
+    txt7  = new texto(wCuad, TXTporque7  , colorFondo, "left", "hanging",                       30*comp, 30*comp, orX, 0,   fuenteR);
+    txt8  = new texto(wCuad, TXTporque8  , colorSecundario, "left", "hanging",             30*comp, 30*comp, orX, 0,   fuenteB);
+    txt9  = new texto(wCuad, TXTporque9  , colorFondo, "left", "hanging",                       30*comp, 30*comp, orX, 0,   fuenteR);
+    txt10 = new texto(wCuad, TXTporque10  , colorSecundario, "left", "hanging",    40*comp, 45*comp, orX, 0,   fuenteB);
 
 
     if (compensacion == 1)
