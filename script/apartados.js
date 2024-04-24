@@ -82,13 +82,13 @@ function DIBUJARhub(obj)
     hCuad = 0*MEDIRtexto(txt1)[1] + 0*MEDIRtexto(txt2)[1] + MEDIRtexto(txt3)[1];
     txt1.y = orY;
     txt2.y = orY + MEDIRtexto(txt1)[1] + sep;
-    txt3.y = 0*txt2.y + 0*MEDIRtexto(txt2)[1] + 0*2*sep + hLogo;
+    txt3.y = orY + hLogo;
     wCuad = Math.max(...[MEDIRtexto(txt1)[0], MEDIRtexto(txt2)[0], MEDIRtexto(txt3)[0]]);
     DIBUJARcuadro(colorSecundario, 0.6, 0, orY - margen, wCuad + orX + margen, hCuad +2*margen + 3*sep + hLogo);
     //DIBUJARtexto(txt1);
     //DIBUJARtexto(txt2);
     DIBUJARtexto(txt3);
-    DIBUJARlogo(0, txt1.x, txt2.y+MEDIRtexto(txt2)[1]+sep, hLogo);
+    DIBUJARlogo(0, txt1.x, 0*txt2.y+0*MEDIRtexto(txt2)[1]+sep, hLogo);
 }
 function DIBUJARdiseñado(obj)
 {
