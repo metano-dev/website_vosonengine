@@ -79,14 +79,14 @@ function DIBUJARhub(obj)
     txt2 = new texto(wCuad, TXTinfinity02, colorFondo, "left", "hanging", 35*compensacion, 30*compensacion, orX, 0,   fuenteB);
     txt3 = new texto(wCuad, TXTinfinity03, colorFondo, "left", "hanging", 25*compensacion, 26*compensacion, orX, 0,   fuenteR);
 
-    hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1] + MEDIRtexto(txt3)[1];
+    hCuad = 0*MEDIRtexto(txt1)[1] + 0*MEDIRtexto(txt2)[1] + MEDIRtexto(txt3)[1];
     txt1.y = orY;
     txt2.y = orY + MEDIRtexto(txt1)[1] + sep;
-    txt3.y = txt2.y + MEDIRtexto(txt2)[1] + 2*sep + hLogo;
+    txt3.y = 0*txt2.y + 0*MEDIRtexto(txt2)[1] + 0*2*sep + hLogo;
     wCuad = Math.max(...[MEDIRtexto(txt1)[0], MEDIRtexto(txt2)[0], MEDIRtexto(txt3)[0]]);
     DIBUJARcuadro(colorSecundario, 0.6, 0, orY - margen, wCuad + orX + margen, hCuad +2*margen + 3*sep + hLogo);
-    DIBUJARtexto(txt1);
-    DIBUJARtexto(txt2);
+    //DIBUJARtexto(txt1);
+    //DIBUJARtexto(txt2);
     DIBUJARtexto(txt3);
     DIBUJARlogo(0, txt1.x, txt2.y+MEDIRtexto(txt2)[1]+sep, hLogo);
 }
