@@ -29,7 +29,8 @@ var menuPrincipal = [
 ];
 var menuInfinity = [
 	new navegador(1, "", 	TXTvoson),
-	new navegador(2, 4,		TXTproy1),
+	new navegador(2, 3,		TXTproy1),
+	new navegador(3, 4,		TXTproy2),
 	new navegador(3, 6,		TXTcontactar)
 ];	
 var menuProyecto = [
