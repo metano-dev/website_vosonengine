@@ -107,9 +107,10 @@ function DIBUJARdiseñado(obj)
     txt2.y = txt1.y + MEDIRtexto(txt1)[1] + sep;
     DIBUJARtexto(txt1);
     DIBUJARtexto(txt2);
+	himg = window.innerHeight*tamañoApartado - txt2.y - MEDIRtexto(txt2)[1] -50;
     if (movil != true)
         DIBUJARfoto(0.3*window.innerWidth- 0.5*obj.y, txt2.y + MEDIRtexto(txt2)[1] + 30, 0.4*window.innerWidth/1.6);
-    else DIBUJARfoto(0.1*window.innerWidth- 0.5*obj.y, txt2.y + MEDIRtexto(txt2)[1] + 40, 0.8*window.innerWidth/1.6);
+    else DIBUJARfoto(0.5*window.innerWidth - 0.8*himg - 0.5*obj.y, txt2.y + MEDIRtexto(txt2)[1] + 40, himg);
 }
 function DIBUJARporque(obj)
 {
@@ -120,7 +121,7 @@ function DIBUJARporque(obj)
     long = 0;
     tot = 0;
     sang = 20;
-    alt = 90;
+    alt = 110;
     for(k=1; k<logosIMG.length; k++)
         tot += logosIMG[k].width * alt / logosIMG[k].height + dist;
     for(m=1; m<logosIMG.length; m++)
