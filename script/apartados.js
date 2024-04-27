@@ -113,14 +113,14 @@ function DIBUJARdiseñado(obj)
 }
 function DIBUJARporque(obj)
 {
-    if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
+    if (obj.y > (deslizamiento+2)*window.innerHeight*0.5)
 		return;
     comp=compensacion;
-    dist = 120;
+    dist = 140;
     long = 0;
     tot = 0;
     sang = 20;
-    alt = 110;
+    alt = 90;
     for(k=1; k<logosIMG.length; k++)
         tot += logosIMG[k].width * alt / logosIMG[k].height + dist;
     for(m=1; m<logosIMG.length; m++)
@@ -321,16 +321,17 @@ function DIBUJARnosotros(obj)
     dist = 120;
     long = 0;
     tot = 0;
+    sang = 20;
     alt = 110;
-    for(k=0; k<listaProyectos.length; k++)
-        tot += clientesIMG[k].width * alt / clientesIMG[k].height + dist;
-    for(m=0; m<listaProyectos.length; m++)
+    for(k=1; k<logosIMG.length; k++)
+        tot += logosIMG[k].width * alt / logosIMG[k].height + dist;
+    for(m=1; m<logosIMG.length; m++)
     {
         desf = 0;
         while ( 50 +long +desf +rotacion.x > window.innerWidth)
             desf -= tot;
-        DIBUJARcliente(m, 50 +long +desf +rotacion.x, obj.y -alt - 20, alt);
-        long += clientesIMG[m].width * alt / clientesIMG[m].height + dist;
+        DIBUJARlogo(m, 50 +long +desf +rotacion.x, obj.y -alt - 20, alt);
+        long += logosIMG[m].width * alt / logosIMG[m].height + dist;
     }
     
     margen = 120*responsividad;
