@@ -107,7 +107,7 @@ function DIBUJARdiseñado(obj)
     txt2.y = txt1.y + MEDIRtexto(txt1)[1] + sep;
     DIBUJARtexto(txt1);
     DIBUJARtexto(txt2);
-	himg = window.innerHeight*tamañoApartado - txt2.y - MEDIRtexto(txt2)[1] -50;
+	himg = window.innerHeight*tamañoApartado - txt2.y - MEDIRtexto(txt2)[1] - 110 - 50;
     if (movil != true)
         DIBUJARfoto(0.3*window.innerWidth- 0.5*obj.y, txt2.y + MEDIRtexto(txt2)[1] + 30, 0.4*window.innerWidth/1.6);
     else DIBUJARfoto(0.5*window.innerWidth - 0.8*himg - 0.5*obj.y, txt2.y + MEDIRtexto(txt2)[1] + 40, himg);
