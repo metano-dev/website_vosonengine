@@ -95,7 +95,7 @@ function DIBUJARdiseñado(obj)
     if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
 		return;
     sep = 15*compensacion;
-    orY = obj.y + 0.1*window.innerHeight*tamañoApartado;
+    orY = obj.y + 0.0*window.innerHeight*tamañoApartado;
     wCuad = ((compensacion>1)*0.2 + 0.5)*window.innerWidth;
     orX = 0.5*window.innerWidth - 0.5*obj.y;
     
@@ -104,13 +104,16 @@ function DIBUJARdiseñado(obj)
 
     txt1.x = orX - 0.5*MEDIRtexto(txt1)[0];
     txt2.x = orX - 0.5*MEDIRtexto(txt2)[0];
+	txt1.y = orY + 0.5*window.innerHeight*tamañoApartado - MEDIRtexto(txt1)[1];
     txt2.y = txt1.y + MEDIRtexto(txt1)[1] + sep;
     DIBUJARtexto(txt1);
     DIBUJARtexto(txt2);
+/*
 	himg = window.innerHeight*tamañoApartado - txt2.y - MEDIRtexto(txt2)[1] - 110 - 50;
     if (movil != true)
         DIBUJARfoto(0.3*window.innerWidth- 0.5*obj.y, txt2.y + MEDIRtexto(txt2)[1] + 30, 0.4*window.innerWidth/1.6);
     else DIBUJARfoto(0.5*window.innerWidth - 0.8*himg - 0.5*obj.y, txt2.y + MEDIRtexto(txt2)[1] + 40, himg);
+	*/
 }
 function DIBUJARporque(obj)
 {
