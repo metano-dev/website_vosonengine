@@ -99,11 +99,11 @@ function DIBUJARdiseñado(obj)
     wCuad = ((compensacion>1)*0.2 + 0.5)*window.innerWidth;
     orX = 0.5*window.innerWidth - 0.5*obj.y;
     
-    txt1  = new texto(wCuad, "Diseñado para hoteles, campings y más.", colorSecundario, "left", "hanging", 45*compensacion, 40*compensacion, orX, orY,   fuenteB);
-    txt2  = new texto(wCuad, "¡Haz que tus clientes sientan la emoción de lo real en un mundo virtual! ", colorFondo, "left", "hanging", 30*compensacion, 30*compensacion, orX, orY,   fuenteM);
+    txt1  = new texto(wCuad, "Diseñado para hoteles, campings y más.", colorSecundario, "center", "hanging", 45*compensacion, 40*compensacion, orX, orY,   fuenteB);
+    txt2  = new texto(wCuad, "¡Haz que tus clientes sientan la emoción de lo real en un mundo virtual! ", colorFondo, "center", "hanging", 30*compensacion, 30*compensacion, orX, orY,   fuenteM);
 
-    txt1.x = orX - 0.5*MEDIRtexto(txt1)[0];
-    txt2.x = orX - 0.5*MEDIRtexto(txt2)[0];
+    txt1.x = orX - 0*MEDIRtexto(txt1)[0];
+    txt2.x = orX - 0*MEDIRtexto(txt2)[0];
 	txt1.y = orY + 0.5*window.innerHeight*tamañoApartado - MEDIRtexto(txt1)[1];
     txt2.y = txt1.y + MEDIRtexto(txt1)[1] + sep;
     DIBUJARtexto(txt1);
