@@ -69,11 +69,11 @@ function DIBUJARhub(obj)
     if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
 		return;
     orX = 50 + 0.5*obj.y;
-    margen = 25*compensacion;
-    sep = 5*compensacion;;
+    margen = 35*compensacion;
+    sep = 10*compensacion;;
     orY = obj.y + 0.5*window.innerHeight*tamañoApartado -2*margen - 100*(horizontal!=true);
     wCuad = ejeY;
-    hLogo = 106;
+    hLogo = 112;
     
     txt1 = new texto(wCuad, TXTinfinity01, colorFondo, "left", "hanging", 35*compensacion, 40*compensacion, orX, 0,   fuenteM);
     txt2 = new texto(wCuad, TXTinfinity02, colorFondo, "left", "hanging", 35*compensacion, 30*compensacion, orX, 0,   fuenteB);
@@ -247,8 +247,8 @@ function DIBUJARinicio(obj)
     wCuad = ejeY;
     
     txt1 = new texto(wCuad, TXTinicio01, colorFondo, "left", "hanging", 45*compensacion, 40*compensacion, orX, 0,   fuenteM);
-    txt2 = new texto(wCuad, TXTinicio02, colorFondo, "left", "hanging", 35*compensacion, 30*compensacion, orX, 0,   fuenteB);
-    txt3 = new texto(wCuad, TXTinicio03, colorFondo, "left", "hanging", 20*compensacion, 22*compensacion, orX, 0,   fuenteR);
+    txt2 = new texto(wCuad, TXTinicio02, colorFondo, "left", "hanging", 45*compensacion, 40*compensacion, orX, 0,   fuenteB);
+    txt3 = new texto(wCuad, TXTinicio03, colorFondo, "left", "hanging", 30*compensacion, 32*compensacion, orX, 0,   fuenteR);
 
     hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1] + MEDIRtexto(txt3)[1];
     txt1.y = orY;
@@ -407,8 +407,8 @@ function DIBUJARvalores(obj)
     {
         wCuad = (window.innerWidth - 3*margen)/2;
     }
-    txt2 = new texto(1000, TXTvalores1, colorSecundario, "left", "hanging", 35*compensacion, 25*compensacion, anim + margen, orY,    fuenteB);
-    txt1 = new texto(wCuad, TXTvalores2, colorPrincipal, "left", "hanging", 25*compensacion, 32*compensacion, anim + margen, orY,    fuenteM);
+    txt2 = new texto(1000, TXTvalores1, colorSecundario, "left", "hanging", 45*compensacion, 40*compensacion, anim + margen, orY,    fuenteB);
+    txt1 = new texto(wCuad, TXTvalores2, colorPrincipal, "left", "hanging", 35*compensacion, 37*compensacion, anim + margen, orY,    fuenteM);
     txt1.y -= 0.5*MEDIRtexto(txt1)[1];
     txt2.y = txt1.y - 50*compensacion;
     txt2.x = txt1.x;
