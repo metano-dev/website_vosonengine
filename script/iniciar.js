@@ -12,7 +12,7 @@ function iniciar()
 //REFRESCO
 function iterar()
 {
-	setTimeout(refrescar, 1000/fps);
+	requestAnimationFrame(refrescar);
 }	
 function rotar()
 {
