@@ -130,7 +130,7 @@ function DIBUJARporque(obj)
     for(m=1; m<logosIMG.length; m++)
     {
         desf = 0;
-        while ( 50 +long +desf > window.innerWidth)
+        while ( 50 +long +desf +rotacion.x> window.innerWidth)
             desf -= tot;
         DIBUJARlogo(m, 50 +long +desf, obj.y -alt - 20, alt);
         long += logosIMG[m].width * alt / logosIMG[m].height + dist;
@@ -332,7 +332,7 @@ function DIBUJARnosotros(obj)
     for(m=1; m<logosIMG.length; m++)
     {
         desf = 0;
-        while ( 50 +long +desf > window.innerWidth)
+        while ( 50 +long +desf +rotacion.x > window.innerWidth)
             desf -= tot;
         DIBUJARlogo(m, 50 +long +desf, obj.y -alt - 20, alt);
         long += logosIMG[m].width * alt / logosIMG[m].height + dist;
