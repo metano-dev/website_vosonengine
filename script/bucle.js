@@ -24,8 +24,10 @@ function actualizar()
 	INTERPOLACIONhiperbolicaY(encabezado);
 	for (i = 0; i < apartados.length; i++)
 		INTERPOLACIONhiperbolicaY(apartados[i]);
+	/*
 	for (i = 0; i < vertices.length; i++)
 		INTERPOLACIONhiperbolicaUVW(vertices[i]);
+	*/
 
 }
 
@@ -39,9 +41,11 @@ function dibujar ()
 		DIBUJARfondo(i);
 
 	//VÉRTICES EN SEGUNDO PLANO:
+	/*
 	for (i = 0; i < vertices.length; i++)
 		DIBUJARvertice(vertices[i], false);
-
+	*/
+	
 	//CONTENIDO:
 	if (paginaActual == "principal")
 		DIBUJARprincipal();
@@ -57,8 +61,10 @@ function dibujar ()
 	DIBUJARlogoVoson(margH, (encabezado.y-2*encabezadoMargenVertical)/1.7);
 
 	//VÉRTICES EN PRIMER PLANO:
+	/*
 	for (i = 0; i < vertices.length; i++)
 		DIBUJARvertice(vertices[i], true);
+  	*/
 	
 	//METANO:
 	DIBUJARfueled();
