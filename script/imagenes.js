@@ -20,7 +20,7 @@ function comprobarCarga()
 	&& 		cargaMiniaturas			== true
 	&& 		cargaIconos				== true)
 	{
-		iterar();
+		refrescar();
 		popup(videos[0]);
 		console.log("todos los medios cargados :)");
 	}
