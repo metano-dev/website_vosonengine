@@ -16,7 +16,7 @@ function tocarIniciar(e)
 		
 	}
 	if (movil != true) {movil = true;}
-	tocarMovil();
+	//tocarMovil();
 }
 function tocarMover(e)
 {
@@ -239,17 +239,19 @@ function popup (dir) {
 		const videoM = document.createElement('video');
 		const fondo = document.getElementById("fondo");
 		if (document.getElementById("video")) {fondo.removeChild(document.getElementById("video"));};
-		
-		videoM.src = dir ;
-		videoM.id = "video" ;
-		videoM.controls = false;
-		videoM.muted    = true;
-		videoM.playsinline = true;
-		videoM.autoplay = true;
-		videoM.loop = true;
-		videoM.width    = fondo.width;
-		videoM.height   = fondo.height;
-		fondo.appendChild(videoM);
+		if (movil != true)
+		{
+			videoM.src = dir ;
+			videoM.id = "video" ;
+			videoM.controls = false;
+			videoM.muted    = true;
+			videoM.playsinline = true;
+			videoM.autoplay = true;
+			videoM.loop = true;
+			videoM.width    = fondo.width;
+			videoM.height   = fondo.height;
+			fondo.appendChild(videoM);
+		}
 		fondo.style.backgroundImage = dir.split("video")[0] + "espera.jpg";
 		//console.log("video");
 		return;
