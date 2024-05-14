@@ -23,6 +23,7 @@ function comprobarCarga()
 		refrescar();
 		popup(videos[0]);
 		console.log("todos los medios cargados");
+		deslizar();
 	}
 	else setTimeout(comprobarCarga, 100);
 }
