@@ -253,7 +253,8 @@ function popup (dir) {
 			videoM.height   = fondo.height;
 			fondo.appendChild(videoM);
 		}
-		fondo.style.backgroundImage = dir.split("video")[0] + "espera.jpg";
+		//fondo.style.backgroundImage = dir.split("video")[0] + "espera.jpg";
+		fondo.style.backgroundImage = "videos/ObsipoyFrida_espera.jpg";
 		//console.log("video");
 		return;
 	}
