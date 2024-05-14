@@ -16,7 +16,6 @@ function dirigir()
 		popup(videos[0]);
 		redimensionar();
 		cargarMedios();
-		deslizar();
 		return;
 	}
 	if (!urlExtra)
@@ -67,7 +66,6 @@ function iniciarPagina(pag)
 	tamañoApartado = pag.tamaño;
 	doX = pag.posiciones[0];
 	definirColores(pag);
-	deslizar(); 
 }
 
 function definirColores(pag)
