@@ -1,6 +1,7 @@
 //INICIO
 function iniciar()
 {	
+	redimensionar();
 	const lienzo = document.getElementById("lienzo");
 	const ctx = lienzo.getContext("2d");
 	ctx.textRendering = "optimizeLegibility";
