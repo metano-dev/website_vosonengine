@@ -22,7 +22,7 @@ function rotar()
 }
 
 //ESCUCHAS
-window.onload		= iniciar;
+//window.onload		= iniciar;
 window.onresize         = redimensionar;
 document.onmousedown    = click;
 document.onmouseup      = unclick;
