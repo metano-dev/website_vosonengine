@@ -237,11 +237,11 @@ function popup (dir) {
 	}
 	if (formato == ".mp4")
 	{	
-		const videoM = document.createElement('video');
 		const fondo = document.getElementById("fondo");
 		if (document.getElementById("video")) {fondo.removeChild(document.getElementById("video"));};
 		if (movil != true)
 		{
+			const videoM = document.createElement('video');
 			videoM.src = dir ;
 			videoM.id = "video" ;
 			videoM.controls = false;
