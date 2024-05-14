@@ -63,7 +63,7 @@ var paginaPrincipal = new pagina(
 	modelosPrincipal,
 	[videoPrincipal1, videoPrincipal2],
 	menuPrincipal,
-	1,
+	0,
 	0.9,
 	[colorVosonPrincipal, colorVosonSecundario, colorVosonParticulaA, colorVosonParticulaB, colorVosonFondo]
 );
@@ -83,7 +83,7 @@ var paginaInfinity = new pagina(
 	modelosInfinity,
 	["videos/InfinityRoom_video.mp4", "proyectos/ZombieSurvival/ZombieSurvival_video.mp4"],
 	menuInfinity,
-	1,
+	0,
 	0.9,
 	[colorIRPrincipal, colorIRSecundario, colorIRParticulaA, colorIRParticulaB, colorIRFondo]
 );
