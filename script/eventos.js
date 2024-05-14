@@ -1,7 +1,7 @@
 function tocarMovil ()
 {
 	movil = true;
-	document.getElementById("fondo").play();
+	document.getElementById("video").play();
 }
 function tocarIniciar(e)
 {
