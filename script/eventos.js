@@ -253,7 +253,7 @@ function popup (dir) {
 			videoM.height   = fondo.height;
 			fondo.appendChild(videoM);
 		}
-		fondo.style.backgroundImage = "url('"+dir.slice(0,dir.lastIndexOf("video")) + "espera.jpg" +"')";
+		fondo.style.backgroundImage = "url('"+dir.slice(0,dir.lastIndexOf("video")) + "espera.png" +"')";
 		//console.log("video");
 		return;
 	}
