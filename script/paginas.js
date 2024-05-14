@@ -4,8 +4,8 @@ function dirigir()
 	{
 			compensacion = 1.5;
 			movil = true;
-			verticesMaximos = 1000;
-			optimizarModelos();
+			//verticesMaximos = 1000;
+			//optimizarModelos();
 	}
     urlRaiz  = String(window.location).split("?")[0];
     urlExtra = String(window.location).split("?")[1];
