@@ -253,6 +253,7 @@ function popup (dir) {
 			videoM.height   = fondo.height;
 			fondo.appendChild(videoM);
 		}
+		console.log(dir.split("video")[0]);
 		fondo.style.backgroundImage = "url("+dir.split("video")[0] + "espera.jpg"+")";
 		//fondo.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Philip_I_of_Taranto_statue.png')";
 		//fondo.style.backgroundColor = "#F00";
