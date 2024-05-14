@@ -35,6 +35,7 @@ function tocarMover(e)
 	}
 	
 	e.preventDefault();
+	window.scrollTo(0, 0);
     	return false;
 }
 function tocarTerminar(e)
