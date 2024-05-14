@@ -135,7 +135,7 @@ function deslizar()
 	fInterpol = (deslizamiento - interpolaciones[interpolacion]) / (interpolaciones[interpolacion + 1] - interpolaciones[interpolacion]);
 	actualizarVertices(Math.floor(interpolacion*0.5), interpolacion);
 	
-	if (deslizamiento > 0.6*deslizamientoMaximo)
+	if (deslizamiento > 0.6*deslizamientoMaximo && deslizamiento > 0.1)
 	{
 		if (videoN != videos[1])
 		{	
@@ -143,7 +143,7 @@ function deslizar()
 			popup(videos[1]);
 		}
 	}
-	if (deslizamiento < 0.6*deslizamientoMaximo)
+	if (deslizamiento < 0.6*deslizamientoMaximo && deslizamiento > 0.1)
 	{
 		if (videoN != videos[0])
 		{	
