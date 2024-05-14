@@ -255,9 +255,7 @@ function popup (dir) {
 		}
 		console.log(dir.split("video")[0]);
 		console.log(dir);
-		fondo.style.backgroundImage = "url("+dir.slice(0,dir.lastIndexOf("video")) + "espera.jpg"+")";
-		//fondo.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Philip_I_of_Taranto_statue.png')";
-		//fondo.style.backgroundColor = "#F00";
+		fondo.style.backgroundImage = dir.slice(0,dir.lastIndexOf("video")) + "espera.jpg";
 		//console.log("video");
 		return;
 	}
