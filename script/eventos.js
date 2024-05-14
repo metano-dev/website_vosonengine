@@ -215,6 +215,10 @@ function redimensionarVideo () {
 		}
 	fondo.width  = ventana.width;
 	fondo.height = ventana.height;
+	fondo.style.top = ventana.style.top ;
+	fondo.style.left = ventana.style.left ;
+	fondo.style.bottom = ventana.style.bottom ;
+	fondo.style.right = ventana.style.right ;
 }
 
 function popup (dir) {
