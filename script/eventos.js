@@ -14,6 +14,8 @@ function tocarIniciar(e)
 		parada = true;
 		if (movil != true) {tocarMovil();}
 	}
+	e.preventDefault();
+    	return false;
 }
 function tocarMover(e)
 {
@@ -30,6 +32,9 @@ function tocarMover(e)
 		parada = true;
 		deslizar();
 	}
+	
+	e.preventDefault();
+    	return false;
 }
 function tocarTerminar(e)
 {
@@ -38,6 +43,9 @@ function tocarTerminar(e)
 		cursor.click = false;
 		parada = false;
 	}
+	
+	e.preventDefault();
+    	return false;
 }
 
 function click (event)
