@@ -12,8 +12,9 @@ function tocarIniciar(e)
 		cursor.ow = rotacion.tx - tou.clientX;
 		cursor.oh = deslizamiento +tou.clientY/window.innerHeight;
 		parada = true;
-		if (movil != true) {tocarMovil();}
+		
 	}
+	if (movil != true) {tocarMovil();}
 	e.preventDefault();
     	return false;
 }
