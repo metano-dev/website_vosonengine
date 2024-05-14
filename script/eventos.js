@@ -1,8 +1,8 @@
 function tocarMovil ()
 {
-	movil = true;
 	vidobj = document.getElementById("video");
-	vidobj.play();
+	if (vidobj.currentTime < 1)
+		vidobj.play();
 }
 function tocarIniciar(e)
 {
@@ -15,7 +15,8 @@ function tocarIniciar(e)
 		parada = true;
 		
 	}
-	if (movil != true) {tocarMovil();}
+	if (movil != true) {movil = true;}
+	tocarMovil();
 }
 function tocarMover(e)
 {
@@ -249,7 +250,7 @@ function popup (dir) {
 		videoM.width    = fondo.width;
 		videoM.height   = fondo.height;
 		fondo.appendChild(videoM);
-		
+		fondo.style.backgroundImage = dir.split("video")[0] + "espera.jpg";
 		//console.log("video");
 		return;
 	}
