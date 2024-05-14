@@ -22,7 +22,7 @@ function comprobarCarga()
 	{
 		iterar();
 		popup(videos[0]);
-		console.log("todos los medios cargados");
+		console.log("todos los medios cargados :)");
 	}
 	else setTimeout(comprobarCarga, 100);
 }
