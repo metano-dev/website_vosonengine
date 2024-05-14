@@ -78,6 +78,7 @@ function redimensionar ()
 	compensacion = 1;
 	if (window.innerWidth < window.innerHeight)
 	{ //VERTICAL
+		movil = true;
 		responsividad = 0.75*window.innerWidth/1920;
 		horizontal = false;
 		doY = 0.6;
