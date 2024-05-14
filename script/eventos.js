@@ -1,3 +1,8 @@
+function tocarMovil ()
+{
+	movil = true;
+	document.getElementById("fondo").play();
+}
 function tocarIniciar(e)
 {
 	if (e.touches.length == 1)
@@ -7,7 +12,7 @@ function tocarIniciar(e)
 		cursor.ow = rotacion.tx - tou.clientX;
 		cursor.oh = deslizamiento +tou.clientY/window.innerHeight;
 		parada = true;
-		movil = true;
+		if (movil != true) {tocarMovil();}
 	}
 }
 function tocarMover(e)
