@@ -246,7 +246,7 @@ function popup (dir) {
 			videoM.id = "video" ;
 			videoM.controls = false;
 			videoM.muted    = true;
-			videoM.playsinline = true;
+			//videoM.playsinline = true;
 			videoM.autoplay = true;
 			videoM.loop = true;
 			videoM.width    = fondo.width;
