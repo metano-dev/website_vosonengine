@@ -38,6 +38,7 @@ function dirigir()
 				cargarFuentes(0);
 				paginaProyecto.videos = ["proyectos/" + urlExtra + "/" + urlExtra+ "_video.mp4", "proyectos/" + urlExtra + "/" + urlExtra+ "_video.mp4"];
 				iniciarPagina(paginaProyecto);
+				popup(videos[0]);
 				redimensionar();
 				iterar();
 				deslizar();
