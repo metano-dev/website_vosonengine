@@ -2,7 +2,7 @@ function tocarMovil ()
 {
 	movil = true;
 	vidobj = document.getElementById("video");
-	//vidobj.play();
+	vidobj.play();
 }
 function tocarIniciar(e)
 {
