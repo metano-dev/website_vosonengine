@@ -21,6 +21,7 @@ function comprobarCarga()
 	&& 		cargaIconos				== true)
 	{
 		iterar();
+		popup(videos[0]);
 		console.log("todos los medios cargados");
 	}
 	else setTimeout(comprobarCarga, 100);
