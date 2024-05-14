@@ -13,6 +13,7 @@ function dirigir()
 	if (urlExtra == "InfinityRoom")
 	{
 		iniciarPagina(paginaInfinity);
+		popup(videos[0]);
 		redimensionar();
 		cargarMedios();
 		deslizar();
