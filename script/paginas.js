@@ -56,7 +56,7 @@ function iniciarPagina(pag)
 	numeroApartados = apartados.length;
 	videos = pag.videos;
 	posiciones = pag.posiciones;
-	popup(videos[0]);
+	//popup(videos[0]);
 	console.log("página iniciada");
 	paginaActual = pag.nombre;
 	predeslizamiento = pag.pre;
