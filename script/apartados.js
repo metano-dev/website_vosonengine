@@ -3,10 +3,11 @@ function DIBUJARinfinity()
     DIBUJARhub(apartados[0]);
     DIBUJARdiseñado(apartados[1]);
     DIBUJARporque(apartados[2]);
-    DIBUJARtoy(apartados[3]);
-    DIBUJARzombie(apartados[4]);
-    DIBUJARcontacto(apartados[5]);
-	DIBUJARpie(apartados[6]);
+    DIBUJARkitchen(apartados[3]);
+    DIBUJARtoy(apartados[4]);
+    DIBUJARzombie(apartados[5]);
+    DIBUJARcontacto(apartados[6]);
+	DIBUJARpie(apartados[7]);
 }
 
 function DIBUJARprincipal()
@@ -193,6 +194,27 @@ function DIBUJARporque(obj)
     DIBUJARtexto(txt9);
     DIBUJARtexto(txt10);
 }
+function DIBUJARkitchen(obj)
+{
+    if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
+		return;
+    orX = 50 + 0.5*obj.y;
+    margen = 25*compensacion;
+    sep = 5*compensacion;
+    orY = obj.y + 0.5*window.innerHeight*tamañoApartado -50 - 100*(horizontal!=true);
+    wCuad = ejeY;
+    
+    txt1 = new texto(wCuad, TXTjuego01titulo, colorFondo, "left", "hanging", 45*compensacion, 40*compensacion, orX, 0,   fuenteB);
+    txt2 = new texto(wCuad, TXTjuego01descripcion, colorFondo, "left", "hanging", 25*compensacion, 30*compensacion, orX, 0,   fuenteL);
+
+    hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1];
+    txt1.y = orY;
+    txt2.y = orY + MEDIRtexto(txt1)[1] + sep;
+    wCuad = Math.max(...[MEDIRtexto(txt1)[0], MEDIRtexto(txt2)[0]]);
+    DIBUJARcuadro(colorSecundario, 0.6, 0, orY - margen, wCuad + orX + margen, hCuad +2*margen + sep);
+    DIBUJARtexto(txt1);
+    DIBUJARtexto(txt2);
+}
 function DIBUJARtoy(obj)
 {
     if (obj.y > (deslizamiento+1)*window.innerHeight*0.5)
@@ -203,8 +225,8 @@ function DIBUJARtoy(obj)
     orY = obj.y + 0.5*window.innerHeight*tamañoApartado -50 - 100*(horizontal!=true);
     wCuad = ejeY;
     
-    txt1 = new texto(wCuad, TXTtoy01, colorFondo, "left", "hanging", 45*compensacion, 40*compensacion, orX, 0,   fuenteB);
-    txt2 = new texto(wCuad, TXTtoy02, colorFondo, "left", "hanging", 25*compensacion, 30*compensacion, orX, 0,   fuenteL);
+    txt1 = new texto(wCuad, TXTjuego02titulo, colorFondo, "left", "hanging", 45*compensacion, 40*compensacion, orX, 0,   fuenteB);
+    txt2 = new texto(wCuad, TXTjuego02descripcion, colorFondo, "left", "hanging", 25*compensacion, 30*compensacion, orX, 0,   fuenteL);
 
     hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1];
     txt1.y = orY;
@@ -224,8 +246,8 @@ function DIBUJARzombie(obj)
     wCuad = ejeY;
     orX = window.innerWidth -wCuad - 0.5*obj.y;
     
-    txt1 = new texto(wCuad, TXTzombie01, colorFondo, "left", "hanging", 45*compensacion, 40*compensacion, orX, 0,   fuenteB);
-    txt2 = new texto(wCuad, TXTzombie02, colorFondo, "left", "hanging", 25*compensacion, 30*compensacion, orX, 0,   fuenteL);
+    txt1 = new texto(wCuad, TXTjuego03titulo, colorFondo, "left", "hanging", 45*compensacion, 40*compensacion, orX, 0,   fuenteB);
+    txt2 = new texto(wCuad, TXTjuego03descripcion, colorFondo, "left", "hanging", 25*compensacion, 30*compensacion, orX, 0,   fuenteL);
 
     hCuad = MEDIRtexto(txt1)[1] + MEDIRtexto(txt2)[1];
     txt1.y = orY;
@@ -313,9 +335,6 @@ function DIBUJARtecnologia(obj)
     DIBUJARtexto(txt2);
     DIBUJARtexto(txt3);
 
-    
-
-	
 }
 function DIBUJARnosotros(obj)
 {   
