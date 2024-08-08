@@ -82,7 +82,7 @@ var paginaInfinity = new pagina(
 	],
 	[0.8, 0.6, 0.2, 0.2, 0.8, 0.2, 0.8, 0.1, 0.9, 0.1, 0.9],
 	modelosInfinity,
-	["videos/InfinityRoom_video.mp4", "proyectos/ZombieSurvival/CrazyKitchen_video.mp4"],
+	["videos/InfinityRoom_video.mp4", "videos/CrazyKitchen_video.mp4"],
 	menuInfinity,
 	0,
 	0.9,
