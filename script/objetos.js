@@ -74,6 +74,7 @@ var paginaInfinity = new pagina(
 		new apartado(colorIRPrincipal,		0.6, 0.24),	// vídeo (logo infinity -> partículas)
 		new apartado(colorIRPrincipal, 0.8,		0.24),	//diseñado
 		new apartado(colorIRPrincipal,		1,0.24),	//por que
+		new apartado(false,		1,0.24),	//crazykitchen (modelo robot)
 		new apartado(false,		1,0.24),	//toypark (modelo robot)
 		new apartado(false,	1,0.24),	//survival zombie (modelo zombie)
 		new apartado(false,		1,0.24),	//contacto (partículas)
@@ -81,7 +82,7 @@ var paginaInfinity = new pagina(
 	],
 	[0.8, 0.6, 0.2, 0.2, 0.8, 0.2, 0.8, 0.1, 0.9, 0.1, 0.9],
 	modelosInfinity,
-	["videos/InfinityRoom_video.mp4", "proyectos/ZombieSurvival/ZombieSurvival_video.mp4"],
+	["videos/InfinityRoom_video.mp4", "proyectos/ZombieSurvival/CrazyKitchen_video.mp4"],
 	menuInfinity,
 	0,
 	0.9,
